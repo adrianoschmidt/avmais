@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/WEB-INF/templates/default.xhtml">
+	<ui:define name="content">
+		<h1>Preencha seu PDI!</h1>
+
+		<h:form id="reg">
+			<h:panelGrid columns="1">
+				<h:outputLabel value="Diga-nos o seu nome:" />
+				<h:inputText value="#{pdiMBean.pdi.name}" />
+
+				<h:outputLabel
+					value="Cadastre uma senha para poder visualizar o andamento do seu PDI no futuro:" />
+				<h:inputText value="#{pdiMBean.pdi.password}" />
+
+				<h:outputLabel value="Confirme a senha por segurança:" />
+				<h:inputText value="#{pdiMBean.pdi.passwordConfirmation}" />
+
+				<h:outputLabel value="Quais os seus pontos fortes?" />
+				<h:inputText value="#{pdiMBean.pdi.positivePoints}" />
+
+				<h:outputLabel value="Quais os seus pontos de desenvolvimento?" />
+				<h:inputText value="#{pdiMBean.pdi.pointsToImprove}" />
+
+				<h:outputLabel
+					value="O que você espera de sua carreira dentro de nossa empresa?" />
+				<h:inputText value="#{pdiMBean.pdi.expectatives}" />
+
+				<h:outputLabel
+					value="Defina ações e prazos para o próximo ano que o ajudarão a alcançar seus objetivos:" />
+				<h:inputText value="#{pdiMBean.pdi.actions}" />
+
+				<h:outputLabel
+					value="Como seu gestor pode ajudar em seu desenvolvimento?" />
+				<h:inputText value="#{pdiMBean.pdi.whatManagerCanDo}" />
+
+
+
+			</h:panelGrid>
+
+			<h:panelGrid columns="2">
+				<h:commandButton id="register" action="#{pdiMBean.register}"
+					value="Register" styleClass="register" />
+				<h:messages styleClass="messages" errorClass="invalid"
+					infoClass="valid" warnClass="warning" globalOnly="true" />
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>
