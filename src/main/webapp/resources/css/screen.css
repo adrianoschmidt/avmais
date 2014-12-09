@@ -1,0 +1,21 @@
+body {
+	padding-right: 25px;
+	padding-left: 25px;
+}
+
+textarea.form-control {
+	height: 90px !important;
+}
+
+.bs-callout {
+	height: 90px;
+	padding: 5px;
+	border: 2px solid #eee;
+	border-left-width: 5px;
+	border-radius: 3px;
+	border-left-color: #5bc0de;
+}
+
+.row-label {
+	margin-top: 10px !important; 	
+}
