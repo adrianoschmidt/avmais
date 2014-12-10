@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" template="/WEB-INF/templates/default.xhtml">
+<ui:composition 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:ui="http://java.sun.com/jsf/facelets" 
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html" 
+	template="/WEB-INF/templates/default.xhtml">
+
 	<ui:define name="content">
 		<h1>Preencha seu PDI!</h1>
 
@@ -56,7 +63,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="bs-callout">
-						Raciocínio Rápido <br /> Comprometido
+						<p:tagCloud model="#{pdiMBean.positivePointsSugestions}" style="width: 100%; border:0px;"/>
 					</div>
 				</div>
 			</div>
@@ -76,7 +83,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="bs-callout">
-						Raciocínio Rápido <br /> Comprometido
+						<p:tagCloud model="#{pdiMBean.pointsToImproveSugestions}" style="width: 100%; border:0px;"/>
 					</div>
 				</div>
 			</div>
@@ -96,7 +103,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="bs-callout">
-						Raciocínio Rápido <br /> Comprometido
+						<p:tagCloud model="#{pdiMBean.expectativesSugestions}" style="width: 100%; border:0px;"/>
 					</div>
 				</div>
 			</div>
@@ -107,37 +114,32 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-2">
-					<h:inputText value="" class="form-control" />
+				<div class="col-md-6">
+					<h:inputTextarea value="#{pdiMBean.pdi.actions}" class="form-control" />
 				</div>
-				<div class="col-md-10">
-					<h:inputText value="#{pdiMBean.pdi.actions}" class="form-control" />
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-2">
-					<h:inputText value="" class="form-control" />
-				</div>
-				<div class="col-md-10">
-					<h:inputText value="#{pdiMBean.pdi.actions}" class="form-control" />
+				<div class="col-md-6">
+					<div class="bs-callout">
+						<p:tagCloud model="#{pdiMBean.actionsSugestions}" style="width: 100%; border:0px;"/>
+					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-2">
-					<h:inputText value="" class="form-control" />
-				</div>
-				<div class="col-md-10">
-					<h:inputText value="#{pdiMBean.pdi.actions}" class="form-control" />
-				</div>
-			</div>
-
 
 			<div class="row row-label">
-				<div class="col-md-12">
+				<div class="col-md-6">
 					<h:outputLabel value="Como seu gestor pode ajudar em seu desenvolvimento?" />
 				</div>
-				<div class="col-md-12">
+				<div class="col-md-6">
+					<h:outputLabel value="Sugestões" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
 					<h:inputTextarea value="#{pdiMBean.pdi.whatManagerCanDo}" class="form-control" />
+				</div>
+				<div class="col-md-6">
+					<div class="bs-callout">
+						<p:tagCloud model="#{pdiMBean.whatManagerCanDoSugestions}" style="width: 100%; border:0px;"/>
+					</div>
 				</div>
 			</div>
 
