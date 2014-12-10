@@ -1,24 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" template="/WEB-INF/templates/default.xhtml">
+	<ui:define name="content">
+		<h1>Preencha seu PDI!</h1>
 
-<h:head>
-</h:head>
-<h:body>
-    <h1>Hello World PrimeFaces --</h1>
+		<h:form id="reg">
+			<br />
 
-    <h:form>
-        <p:editor value="#{mBean.texto}" />
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Diga-nos o seu nome:" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h:inputText value="#{pdiMBean.pdi.name}" class="form-control" />
+				</div>
+			</div>
 
-        <p:commandButton action="#{mBean.acao}" update=":myid" />
-    </h:form>
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Cadastre uma senha:" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h:inputSecret value="#{pdiMBean.pdi.password}" class="form-control" />
+				</div>
+			</div>
 
-    <h:outputText value="#{mBean.texto}" id="myid" />
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Confirme a senha por segurança:" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h:inputSecret value="#{pdiMBean.pdi.passwordConfirmation}" class="form-control" />
+				</div>
+			</div>
 
-</h:body>
-</html>
+			<br />
+
+			<div class="row row-label">
+				<div class="col-md-6">
+					<h:outputLabel value="Quais são os seus pontos fortes?" />
+				</div>
+				<div class="col-md-6">
+					<h:outputLabel value="Sugestões" />
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<h:inputTextarea value="#{pdiMBean.pdi.positivePoints}" class="form-control" />
+				</div>
+				<div class="col-md-6">
+					<div class="bs-callout">
+						Raciocínio Rápido <br /> Comprometido
+					</div>
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-6">
+					<h:outputLabel value="O que você ainda precisa melhorar?" />
+				</div>
+				<div class="col-md-6">
+					<h:outputLabel value="Sugestões" />
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<h:inputTextarea value="#{pdiMBean.pdi.pointsToImprove}" class="form-control" />
+				</div>
+				<div class="col-md-6">
+					<div class="bs-callout">
+						Raciocínio Rápido <br /> Comprometido
+					</div>
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-6">
+					<h:outputLabel value="O que você espera de sua carreira dentro de nossa empresa?" />
+				</div>
+				<div class="col-md-6">
+					<h:outputLabel value="Sugestões" />
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<h:inputTextarea value="#{pdiMBean.pdi.expectatives}" class="form-control" />
+				</div>
+				<div class="col-md-6">
+					<div class="bs-callout">
+						Raciocínio Rápido <br /> Comprometido
+					</div>
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Defina ações e prazos para o próximo ano que o ajudarão a alcançar seus objetivos:" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2">
+					<h:inputText value="" class="form-control" />
+				</div>
+				<div class="col-md-10">
+					<h:inputText value="#{pdiMBean.pdi.actions}" class="form-control" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2">
+					<h:inputText value="" class="form-control" />
+				</div>
+				<div class="col-md-10">
+					<h:inputText value="#{pdiMBean.pdi.actions}" class="form-control" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2">
+					<h:inputText value="" class="form-control" />
+				</div>
+				<div class="col-md-10">
+					<h:inputText value="#{pdiMBean.pdi.actions}" class="form-control" />
+				</div>
+			</div>
+
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Como seu gestor pode ajudar em seu desenvolvimento?" />
+				</div>
+				<div class="col-md-12">
+					<h:inputTextarea value="#{pdiMBean.pdi.whatManagerCanDo}" class="form-control" />
+				</div>
+			</div>
+
+			<br />
+
+			<h:panelGrid columns="2">
+				<h:commandButton id="register" action="#{pdiMBean.register}" value="Enviar" />
+				<h:messages styleClass="messages" errorClass="invalid" infoClass="valid" warnClass="warning" globalOnly="true" />
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>
+
