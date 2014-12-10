@@ -13,7 +13,7 @@ import javax.ejb.Stateless;
 @Stateless
 public class TeamMemberBean {
 
-    private static ICrud<TeamMemberPdi> crud = FacadeCrud.getInstance("teammemberpdi");
+    public ICrud<TeamMemberPdi> crud = FacadeCrud.getInstance("teammemberpdi");
 
     public TeamMemberPdi create(TeamMemberPdi pdi) {
 

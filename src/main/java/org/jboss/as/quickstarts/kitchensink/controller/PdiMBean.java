@@ -6,20 +6,30 @@ import org.jboss.as.quickstarts.kitchensink.model.TeamMemberPdi;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
+import java.util.ArrayList;
+import java.util.List;
 
 @ManagedBean
 @ViewScoped
 public class PdiMBean {
 
 	@Inject
-	private TeamMemberBean TeamMemberBean;
+	private TeamMemberBean teamMemberBean;
 
 	private TeamMemberPdi pdi = new TeamMemberPdi();
 
 	public void register() throws Exception {
 		System.out.println("salvou " + pdi.getName());
 
-		TeamMemberBean.create(pdi);
+		teamMemberBean.create(pdi);
+	}
+
+	public List<TeamMemberPdi> list(){
+
+		List<TeamMemberPdi> list = new ArrayList<>();
+		list = teamMemberBean.crud.findAll();
+
+		return list;
 	}
 
 	public TeamMemberPdi getPdi() {

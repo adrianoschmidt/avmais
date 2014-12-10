@@ -14,7 +14,7 @@ public class MongoConnection {
 
         MongoClient mongoClient = null;
         try {
-            mongoClient = new MongoClient( URL_MONGO , 27017 );
+            mongoClient = new MongoClient( URL_MONGO_OPENSHIFT , 27017 );
 
         } catch (UnknownHostException e) {
             e.printStackTrace();

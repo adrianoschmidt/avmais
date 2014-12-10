@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" template="/WEB-INF/templates/default.xhtml">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+				xmlns:ui="http://java.sun.com/jsf/facelets"
+				xmlns:f="http://java.sun.com/jsf/core"
+				xmlns:h="http://java.sun.com/jsf/html"
+				xmlns:p="http://primefaces.org/ui"
+				template="/WEB-INF/templates/default.xhtml">
 	<ui:define name="content">
 		<h1>Preencha seu PDI!</h1>
 
@@ -133,6 +138,17 @@
 				<h:messages styleClass="messages" errorClass="invalid" infoClass="valid" warnClass="warning" globalOnly="true" />
 			</h:panelGrid>
 		</h:form>
+
+		<hr></hr>
+
+		<p:dataTable value="#{pdiMBean.list}" var="pdi">
+
+			<p:column>
+				<f:facet name="header">Nome</f:facet>
+				<h:outputText value="#{pdi.}"
+			</p:column>
+		</p:dataTable>
+
 	</ui:define>
 </ui:composition>
 
