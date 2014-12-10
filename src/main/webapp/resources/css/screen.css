@@ -3,10 +3,6 @@ body {
 	padding-left: 25px;
 }
 
-textarea.form-control {
-	height: 90px !important;
-}
-
 .bs-callout {
 	height: 90px;
 	padding: 5px;

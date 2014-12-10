@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:ui="http://java.sun.com/jsf/facelets" 
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html" 
+	template="/WEB-INF/templates/default.xhtml">
+
+	<ui:define name="content">
+		<h1> PDI - Plano de Desenvolvimento Individual (Supero Tecnologia) </h1>
+		
+		<br/>
+		
+		<p> Agora você vai avaliar outro colaborador da empresa e propor objetivos para essa pessoa. </p>
+		<p> Lembre-se: <b>O PDI serve para ajudar o colaborador a se conhecer melhor e poder crescer.</b> </p>
+
+		<h:form id="reg">
+			<br />
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Preencha o seu e-mail:" />
+					<h:inputText value="#{pdiMBean.pdi.name}" class="form-control" />
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Preencha o e-mail de quem você vai avaliar:" />
+					<h:inputText value="#{pdiMBean.pdi.name}" class="form-control" />
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Quais são os seus pontos fortes dessa pessoa?" />
+					<h:inputTextarea value="#{pdiMBean.pdi.positivePoints}" class="form-control" rows="4"/>
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="O que essa pessoa ainda precisa melhorar?" />
+					<h:inputTextarea value="#{pdiMBean.pdi.pointsToImprove}" class="form-control" rows="4" />
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="O que você recomendaria a ele para estudar?" />
+					<h:inputTextarea value="#{pdiMBean.pdi.expectatives}" class="form-control" rows="4" />
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Que livros, filmes ou cursos você indica para essa pessoa?" />
+					<h:inputTextarea value="#{pdiMBean.pdi.whatManagerCanDo}" class="form-control" rows="4" />
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="E na questão comportamental, coisas do dia-a-dia no trabalho. O que você recomendaria?" />
+					<h:inputTextarea value="#{pdiMBean.pdi.whatManagerCanDo}" class="form-control" rows="4" />
+				</div>
+			</div>
+
+			<br />
+
+			<h:commandButton action="#{pdiMBean.register}" value="Enviar Avaliação" class="btn btn-primary"/>
+
+			<br />
+			<br />
+
+		</h:form>
+	</ui:define>
+</ui:composition>

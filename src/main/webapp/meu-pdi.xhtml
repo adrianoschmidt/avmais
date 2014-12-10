@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:ui="http://java.sun.com/jsf/facelets" 
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html" 
+	template="/WEB-INF/templates/default.xhtml">
+
+	<ui:define name="content">
+		<h1> PDI - Plano de Desenvolvimento Individual (Supero Tecnologia) </h1>
+		
+		<br/>
+		
+		<p> Agora você vai preencher alguns dados sobre você e sobre seus objetivos. </p>
+		<p> Outras pessoas (seu gestor por exemplo e/ou a moça do RH) farão o mesmo com o objetivo de avaliar você e te ajudar a alcançar seus objetivos. </p>
+		<p> Ao final do processo você terá uma lista de ações e prazos para você realizar durante o ano. </p>
+		<p> No final do ano será feita uma nova avaliação para ver o cumprimento das metas propostas e já pensar no ano seguinte. </p>
+		<p> Lembre-se: <b>O PDI serve para ajudar você a se conhecer melhor e poder crescer.</b> Aproveite! </p>
+
+		<h:form id="reg">
+			<br />
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Preencha o seu e-mail:" />
+					<h:inputText value="#{pdiMBean.pdi.name}" class="form-control" />
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Quais são os seus pontos fortes?" />
+					<h:inputTextarea value="#{pdiMBean.pdi.positivePoints}" class="form-control" rows="4"/>
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="O que você ainda precisa melhorar?" />
+					<h:inputTextarea value="#{pdiMBean.pdi.pointsToImprove}" class="form-control" rows="4" />
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="O que você espera de sua carreira dentro de nossa empresa?" />
+					<h:inputTextarea value="#{pdiMBean.pdi.expectatives}" class="form-control" rows="4" />
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Defina ações e prazos para o próximo ano que o ajudarão a alcançar seus objetivos:" />
+					<h:inputTextarea value="#{pdiMBean.pdi.actions}" class="form-control" rows="4" />
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Como seu gestor pode ajudar em seu desenvolvimento?" />
+					<h:inputTextarea value="#{pdiMBean.pdi.whatManagerCanDo}" class="form-control" rows="4" />
+				</div>
+			</div>
+
+			<br />
+
+			<h:commandButton action="#{pdiMBean.register}" value="Enviar PDI" class="btn btn-primary"/>
+
+			<br />
+			<br />
+
+		</h:form>
+	</ui:define>
+</ui:composition>
