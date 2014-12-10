@@ -1,9 +1,10 @@
 package br.com.pdionline.ejb;
 
+import br.com.pdionline.entity.TeamMemberPdi;
 import br.com.pdionline.facade.FacadeCrud;
 import br.com.pdionline.facade.ICrud;
+
 import com.mongodb.BasicDBObject;
-import org.jboss.as.quickstarts.kitchensink.model.TeamMemberPdi;
 
 import javax.ejb.Stateless;
 
@@ -13,7 +14,7 @@ import javax.ejb.Stateless;
 @Stateless
 public class TeamMemberBean {
 
-    public ICrud<TeamMemberPdi> crud = FacadeCrud.getInstance("teammemberpdi");
+    public ICrud<TeamMemberPdi> crud = null; //FacadeCrud.getInstance("teammemberpdi");
 
     public TeamMemberPdi create(TeamMemberPdi pdi) {
 

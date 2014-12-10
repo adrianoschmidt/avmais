@@ -1,7 +1,8 @@
-package org.jboss.as.quickstarts.kitchensink.controller;
+package br.com.pdionline.jsf;
 
 import br.com.pdionline.ejb.TeamMemberBean;
-import org.jboss.as.quickstarts.kitchensink.model.TeamMemberPdi;
+import br.com.pdionline.entity.TeamMemberPdi;
+
 import org.primefaces.model.tagcloud.DefaultTagCloudItem;
 import org.primefaces.model.tagcloud.DefaultTagCloudModel;
 import org.primefaces.model.tagcloud.TagCloudModel;
@@ -9,6 +10,7 @@ import org.primefaces.model.tagcloud.TagCloudModel;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
+
 import java.util.ArrayList;
 import java.util.List;
 

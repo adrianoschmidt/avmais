@@ -1,4 +1,4 @@
-package org.jboss.as.quickstarts.kitchensink.model;
+package br.com.pdionline.entity;
 
 import java.io.Serializable;
 
