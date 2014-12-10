@@ -1,5 +1,7 @@
 package br.com.pdionline.facade;
 
+import com.mongodb.BasicDBObject;
+
 import java.util.List;
 
 /**
@@ -11,7 +13,7 @@ public interface ICrud<T> {
 
     T find(Object id);
     
-    boolean delete(Object id);
+    Object delete(Object id);
 
-    T create(Object T);
+    Object create(BasicDBObject query);
 }

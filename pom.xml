@@ -7,11 +7,15 @@
     <packaging>war</packaging>
     <version>1.0</version>
     <name>pdionline</name>
-  
-    <properties>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.executable>${env.OPENSHIFT_WILDFLY_DIR}usr/lib/jvm/jdk1.8.0_05/bin/javac</maven.compiler.executable>
+        <maven.compiler.fork>true</maven.compiler.fork>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>javax</groupId>
@@ -29,7 +33,11 @@
             <artifactId>mongo-java-driver</artifactId>
             <version>2.13.0-rc0</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.mongojack</groupId>
+            <artifactId>mongojack</artifactId>
+            <version>2.1.0</version>
+        </dependency>
     </dependencies>
 
 	<build>
@@ -54,8 +62,5 @@
 			</resource>
 		</resources>
 	</build>
-	
-<profiles>
 
-  </profiles>
 </project>
