@@ -21,7 +21,7 @@ public class MongoConnection {
             e.printStackTrace();
         }
 
-        DB db = mongoClient.getDB( "mydb" );
+        DB db = mongoClient.getDB( "pdionline" );
 
         return db;
     }
