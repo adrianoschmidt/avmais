@@ -1,36 +1,63 @@
 package br.com.pdionline.facade;
 
 import br.com.pdionline.mongo.MongoConnection;
-import com.mongodb.DB;
-import com.mongodb.DBCollection;
+import com.mongodb.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by supero on 09/12/2014.
  */
-public class FacadeCrud implements ICrud{
+public class FacadeCrud<T> implements ICrud{
 
-    private DB db = MongoConnection.getDB();
-    DBCollection col = db.getCollection("post");
+    // FIELDS
+    private static FacadeCrud instance;
+    private static DB db = MongoConnection.getDB();
+    private static DBCollection collection;
+    //JacksonDBCollection<T, String> coll;
 
+    // SINGLETON
+    public static FacadeCrud getInstance(String string) {
+        collection = db.getCollection(string);
+        if (instance == null)
+            instance = new FacadeCrud();
+        return instance;
+    }
+
+    // METHODS
+
+
+    // OVERRIDEN METHODS
     @Override
-    public List findAll() {
-        return null;
+    public List<T> findAll() {
+
+        DBCursor cursor = collection.find();
+        List<T> aux = new ArrayList<>();
+        while (cursor.hasNext()){
+            aux.add((T) cursor.next());
+        }
+        return aux;
+
     }
 
     @Override
     public Object find(Object id) {
-        return null;
+        DBObject ref = new BasicDBObject("id",id);
+        return collection.findOne(ref);
     }
 
     @Override
-    public boolean delete(Object id) {
-        return false;
+    public Object delete(Object id) {
+        DBObject ref = new BasicDBObject("id",id);
+        WriteResult result = collection.remove(ref);
+        return result.getUpsertedId();
+
     }
 
     @Override
-    public Object create(Object T) {
-        return null;
+    public Object create(BasicDBObject query) {
+        WriteResult result = collection.insert(query);
+        return result.getUpsertedId();
     }
 }

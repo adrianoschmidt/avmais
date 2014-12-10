@@ -2,17 +2,8 @@ package org.jboss.as.quickstarts.kitchensink.model;
 
 import java.io.Serializable;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
 @SuppressWarnings("serial")
-@Entity
 public class TeamMemberPdi implements Serializable {
-
-	@Id
-	@GeneratedValue
-	private Long id;
 
 	private String name;
 	private String password;
@@ -22,14 +13,6 @@ public class TeamMemberPdi implements Serializable {
 	private String expectatives;
 	private String actions;
 	private String whatManagerCanDo;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public String getName() {
 		return name;
