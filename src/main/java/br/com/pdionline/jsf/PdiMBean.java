@@ -1,21 +1,17 @@
 package br.com.pdionline.jsf;
 
-import br.com.pdionline.ejb.TeamMemberBean;
-import br.com.pdionline.entity.TeamMemberPdi;
-
-import org.primefaces.model.tagcloud.DefaultTagCloudItem;
-import org.primefaces.model.tagcloud.DefaultTagCloudModel;
-import org.primefaces.model.tagcloud.TagCloudModel;
-
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
-import javax.inject.Inject;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.enterprise.context.RequestScoped;
+import javax.faces.bean.ManagedBean;
+import javax.inject.Inject;
+
+import br.com.pdionline.ejb.TeamMemberBean;
+import br.com.pdionline.entity.TeamMemberPdi;
+
 @ManagedBean
-@ViewScoped
+@RequestScoped
 public class PdiMBean {
 
 	@Inject
@@ -45,4 +41,12 @@ public class PdiMBean {
 		this.pdi = pdi;
 	}
 
+	public List<String> getTeamMembers() {
+		List<String> members = new ArrayList<String>();
+		members.add("Carlos Silva");
+		members.add("José Silveira");
+		members.add("Luiz Carlos Schmoekel");
+		members.add("Manuela Assiz Garcez");
+		return members;
+	}
 }
