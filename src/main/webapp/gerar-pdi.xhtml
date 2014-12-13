@@ -2,12 +2,11 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui" xmlns:h="http://java.sun.com/jsf/html" template="/WEB-INF/templates/default.xhtml">
 
 	<ui:define name="content">
-		<h1>PDI - Plano de Desenvolvimento Individual (Supero Tecnologia)</h1>
-		<h2>Gerando PDI</h2>
+		<h2 class="page-header">Gerando PDI</h2>
 
 		<br />
 
-		<p>Agora você vai comparar o que o colaborador falou de si mesmo com as avaliações feitas dele.</p>
+		<p>Agora você vai comparar o que o colaborador falou de si mesmo com as avaliações feitas sobre ele.</p>
 		<p>Com essa comparação, você elaborará, junto com o colaborador, o PDI com a lista de ações e prazos para o próximo ano</p>
 		<p>Não esqueça de voltar para avaliar o andamento das ações durante o ano e no final do período, fazer uma avaliação geral e criar o PDI do próximo ano.</p>
 		<p>
@@ -28,78 +27,72 @@
 				</div>
 			</div>
 
+			<br />
+
 			<div class="row row-label">
 				<div class="col-md-12">
-					<h:outputLabel value="Quem fez a avaliação dessa pessoa" />
+					<h:outputLabel value="Pontos fortes:" />
+					<h:inputTextarea value="#{pdiMBean.pdi.positivePoints}" class="form-control" rows="6" />
 				</div>
+			</div>
+
+			<div class="row row-label">
 				<div class="col-md-12">
-					<p:commandLink>
-						<h:outputText value="Luiz Carlos Schmoekel" />
-					</p:commandLink>
-					<p:commandLink style="padding-left:75px;">
-						<h:outputText value="Jean de Oliveira" />
-					</p:commandLink>
-					<p:commandLink style="padding-left:75px;">
-						<h:outputText value="Patrícia Souza" />
-					</p:commandLink>
-					<p:commandLink style="padding-left:75px;">
-						<h:outputText value="PDI" />
-					</p:commandLink>
+					<h:outputLabel value="Pontos a melhorar:" />
+					<h:inputTextarea value="#{pdiMBean.pdi.pointsToImprove}" class="form-control" rows="6" />
 				</div>
 			</div>
 
-			<div class="panel panel-primary">
-				<!-- Default panel contents -->
-				<div class="panel-heading">Patrícia Souza</div>
-				<div class="panel-body">
-
-					<div class="row row-label">
-						<div class="col-md-12">
-							<h:outputLabel value="Preencha o e-mail de quem você vai avaliar:" />
-							<h:inputText value="#{pdiMBean.pdi.name}" class="form-control" />
-						</div>
-					</div>
-
-					<div class="row row-label">
-						<div class="col-md-12">
-							<h:outputLabel value="Quais são os seus pontos fortes dessa pessoa?" />
-							<h:inputTextarea value="#{pdiMBean.pdi.positivePoints}" class="form-control" rows="4" />
-						</div>
-					</div>
-
-					<div class="row row-label">
-						<div class="col-md-12">
-							<h:outputLabel value="O que essa pessoa ainda precisa melhorar?" />
-							<h:inputTextarea value="#{pdiMBean.pdi.pointsToImprove}" class="form-control" rows="4" />
-						</div>
-					</div>
-
-					<div class="row row-label">
-						<div class="col-md-12">
-							<h:outputLabel value="O que você recomendaria a ele para estudar?" />
-							<h:inputTextarea value="#{pdiMBean.pdi.expectatives}" class="form-control" rows="4" />
-						</div>
-					</div>
-
-					<div class="row row-label">
-						<div class="col-md-12">
-							<h:outputLabel value="Que livros, filmes ou cursos você indica para essa pessoa?" />
-							<h:inputTextarea value="#{pdiMBean.pdi.whatManagerCanDo}" class="form-control" rows="4" />
-						</div>
-					</div>
-
-					<div class="row row-label">
-						<div class="col-md-12">
-							<h:outputLabel value="E na questão comportamental, coisas do dia-a-dia no trabalho. O que você recomendaria?" />
-							<h:inputTextarea value="#{pdiMBean.pdi.whatManagerCanDo}" class="form-control" rows="4" />
-						</div>
-					</div>
-
-					<br />
-
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Expectativas dentro da empresa:" />
+					<h:inputTextarea value="#{pdiMBean.pdi.expectatives}" class="form-control" rows="6" />
 				</div>
-
 			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Recomendações de estudo:" />
+					<h:inputTextarea value="#{pdiMBean.pdi.expectatives}" class="form-control" rows="6" />
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Indicações de livros, filmes ou cursos:" />
+					<h:inputTextarea value="#{pdiMBean.pdi.whatManagerCanDo}" class="form-control" rows="6" />
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Recomendações para o dia-a-dia:" />
+					<h:inputTextarea value="#{pdiMBean.pdi.whatManagerCanDo}" class="form-control" rows="6" />
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Ações para o próximo ano:" />
+					<h:inputTextarea value="#{pdiMBean.pdi.whatManagerCanDo}" class="form-control" rows="6" />
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Como o gestor poderá ajudar:" />
+					<h:inputTextarea value="#{pdiMBean.pdi.whatManagerCanDo}" class="form-control" rows="6" />
+				</div>
+			</div>
+
+			<br />
+
+			<h:commandButton action="#{pdiMBean.register}" value="Salvar" class="btn btn-primary" />
+			<h:commandButton action="#{pdiMBean.register}" value="Imprimir" class="btn btn-default" style="margin-left:10px;"/>
+			<h:commandButton action="#{pdiMBean.register}" value="Enviar por e-mail" class="btn btn-default" style="margin-left:10px;"/>
+
+			<br />
+			<br />
 
 		</h:form>
 	</ui:define>

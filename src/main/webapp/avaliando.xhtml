@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ui:composition 
-	xmlns="http://www.w3.org/1999/xhtml" 
-	xmlns:ui="http://java.sun.com/jsf/facelets" 
-	xmlns:f="http://java.sun.com/jsf/core" 
-	xmlns:p="http://primefaces.org/ui"
-	xmlns:h="http://java.sun.com/jsf/html" 
-	template="/WEB-INF/templates/default.xhtml">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui" xmlns:h="http://java.sun.com/jsf/html" template="/WEB-INF/templates/default.xhtml">
 
 	<ui:define name="content">
-		<h1> PDI - Plano de Desenvolvimento Individual (Supero Tecnologia) </h1>
-		<h2> Avaliando outra pessoa </h2>
-		
-		<br/>
-		
-		<p> Agora você vai avaliar outro colaborador da empresa e propor objetivos para essa pessoa. </p>
-		<p> Lembre-se: <b>O PDI serve para ajudar o colaborador a se conhecer melhor e poder crescer.</b> </p>
+		<h2 class="page-header">Avaliando outra pessoa</h2>
+
+		<br />
+
+		<p>Agora você vai avaliar outro colaborador da empresa e propor objetivos para essa pessoa.</p>
+		<p>
+			Lembre-se: <b>O PDI serve para ajudar o colaborador a se conhecer melhor e poder crescer.</b>
+		</p>
 
 		<h:form id="reg">
 			<br />
@@ -36,7 +31,7 @@
 			<div class="row row-label">
 				<div class="col-md-12">
 					<h:outputLabel value="Quais são os seus pontos fortes dessa pessoa?" />
-					<h:inputTextarea value="#{pdiMBean.pdi.positivePoints}" class="form-control" rows="4"/>
+					<h:inputTextarea value="#{pdiMBean.pdi.positivePoints}" class="form-control" rows="4" />
 				</div>
 			</div>
 
@@ -70,7 +65,8 @@
 
 			<br />
 
-			<h:commandButton action="#{pdiMBean.register}" value="Enviar Avaliação" class="btn btn-primary"/>
+			<h:commandButton action="#{pdiMBean.register}" value="Salvar e Enviar" class="btn btn-primary" />
+			<h:commandButton action="#{pdiMBean.register}" value="Imprimir" class="btn btn-default" style="margin-left:10px;"/>
 
 			<br />
 			<br />

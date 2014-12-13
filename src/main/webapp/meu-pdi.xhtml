@@ -8,7 +8,7 @@
 	template="/WEB-INF/templates/default.xhtml">
 
 	<ui:define name="content">
-		<h1> PDI - Plano de Desenvolvimento Individual (Supero Tecnologia) </h1>
+		<h2 class="page-header">Meu PDI</h2>
 		
 		<br/>
 		
@@ -65,7 +65,8 @@
 
 			<br />
 
-			<h:commandButton action="#{pdiMBean.register}" value="Enviar PDI" class="btn btn-primary"/>
+			<h:commandButton action="#{pdiMBean.register}" value="Salvar e Enviar" class="btn btn-primary"/>
+			<h:commandButton action="#{pdiMBean.register}" value="Imprimir" class="btn btn-default" style="margin-left:10px;"/>
 
 			<br />
 			<br />
