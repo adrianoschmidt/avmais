@@ -2,40 +2,37 @@ package br.com.pdionline.entity;
 
 import java.io.Serializable;
 
-@SuppressWarnings("serial")
-public class TeamMemberPdi implements Serializable {
+public class MyPdi implements Serializable {
 
-	private String name;
-	private String password;
-	private String passwordConfirmation;
+	private static final long serialVersionUID = 1L;
+
+	private Long id;
+
+	private User user;
+
 	private String positivePoints;
 	private String pointsToImprove;
-	private String expectatives;
+	private String nextGoals;
 	private String actions;
 	private String whatManagerCanDo;
 
-	public String getName() {
-		return name;
+	public Long getId() {
+		return id;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
-	public String getPassword() {
-		return password;
+	public User getUser() {
+		if (user == null) {
+			user = new User();
+		}
+		return user;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public String getPasswordConfirmation() {
-		return passwordConfirmation;
-	}
-
-	public void setPasswordConfirmation(String passwordConfirmation) {
-		this.passwordConfirmation = passwordConfirmation;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	public String getPositivePoints() {
@@ -54,12 +51,12 @@ public class TeamMemberPdi implements Serializable {
 		this.pointsToImprove = pointsToImprove;
 	}
 
-	public String getExpectatives() {
-		return expectatives;
+	public String getNextGoals() {
+		return nextGoals;
 	}
 
-	public void setExpectatives(String expectatives) {
-		this.expectatives = expectatives;
+	public void setNextGoals(String nextGoals) {
+		this.nextGoals = nextGoals;
 	}
 
 	public String getActions() {

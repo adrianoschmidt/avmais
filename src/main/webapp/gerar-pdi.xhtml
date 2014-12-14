@@ -19,10 +19,9 @@
 			<div class="row row-label">
 				<div class="col-md-12">
 					<h:outputLabel value="Escolha a pessoa que você vai gerar o PDI:" />
-				</div>
-				<div class="col-md-12">
-					<h:selectOneMenu value="" styleClass="form-control">
-						<f:selectItems value="#{pdiMBean.teamMembers}" />
+					<h:selectOneMenu value="#{generatePdiMBean.pdi.userEvaluated}" styleClass="form-control">
+						<f:selectItem noSelectionOption="true" itemLabel="Selecione..." />
+						<f:selectItems value="#{generatePdiMBean.users}" var="user" itemValue="#{user}" itemLabel="#{user.name}" />
 					</h:selectOneMenu>
 				</div>
 			</div>
@@ -32,64 +31,64 @@
 			<div class="row row-label">
 				<div class="col-md-12">
 					<h:outputLabel value="Pontos fortes:" />
-					<h:inputTextarea value="#{pdiMBean.pdi.positivePoints}" class="form-control" rows="6" />
+					<h:inputTextarea value="#{generatePdiMBean.pdi.positivePoints}" class="form-control" rows="6" />
 				</div>
 			</div>
 
 			<div class="row row-label">
 				<div class="col-md-12">
 					<h:outputLabel value="Pontos a melhorar:" />
-					<h:inputTextarea value="#{pdiMBean.pdi.pointsToImprove}" class="form-control" rows="6" />
+					<h:inputTextarea value="#{generatePdiMBean.pdi.pointsToImprove}" class="form-control" rows="6" />
 				</div>
 			</div>
 
 			<div class="row row-label">
 				<div class="col-md-12">
-					<h:outputLabel value="Expectativas dentro da empresa:" />
-					<h:inputTextarea value="#{pdiMBean.pdi.expectatives}" class="form-control" rows="6" />
+					<h:outputLabel value="Próximos objetivos na carreira:" />
+					<h:inputTextarea value="#{generatePdiMBean.pdi.nextGoals}" class="form-control" rows="6" />
 				</div>
 			</div>
 
 			<div class="row row-label">
 				<div class="col-md-12">
 					<h:outputLabel value="Recomendações de estudo:" />
-					<h:inputTextarea value="#{pdiMBean.pdi.expectatives}" class="form-control" rows="6" />
+					<h:inputTextarea value="#{generatePdiMBean.pdi.studySugestions}" class="form-control" rows="6" />
 				</div>
 			</div>
 
 			<div class="row row-label">
 				<div class="col-md-12">
 					<h:outputLabel value="Indicações de livros, filmes ou cursos:" />
-					<h:inputTextarea value="#{pdiMBean.pdi.whatManagerCanDo}" class="form-control" rows="6" />
+					<h:inputTextarea value="#{generatePdiMBean.pdi.indications}" class="form-control" rows="6" />
 				</div>
 			</div>
 
 			<div class="row row-label">
 				<div class="col-md-12">
 					<h:outputLabel value="Recomendações para o dia-a-dia:" />
-					<h:inputTextarea value="#{pdiMBean.pdi.whatManagerCanDo}" class="form-control" rows="6" />
+					<h:inputTextarea value="#{generatePdiMBean.pdi.tipsForDailyBehavior}" class="form-control" rows="6" />
 				</div>
 			</div>
 
 			<div class="row row-label">
 				<div class="col-md-12">
-					<h:outputLabel value="Ações para o próximo ano:" />
-					<h:inputTextarea value="#{pdiMBean.pdi.whatManagerCanDo}" class="form-control" rows="6" />
+					<h:outputLabel value="Ações e prazos para o próximo ano:" />
+					<h:inputTextarea value="#{generatePdiMBean.pdi.actions}" class="form-control" rows="6" />
 				</div>
 			</div>
 
 			<div class="row row-label">
 				<div class="col-md-12">
 					<h:outputLabel value="Como o gestor poderá ajudar:" />
-					<h:inputTextarea value="#{pdiMBean.pdi.whatManagerCanDo}" class="form-control" rows="6" />
+					<h:inputTextarea value="#{generatePdiMBean.pdi.whatManagerCanDo}" class="form-control" rows="6" />
 				</div>
 			</div>
 
 			<br />
 
-			<h:commandButton action="#{pdiMBean.register}" value="Salvar" class="btn btn-primary" />
-			<h:commandButton action="#{pdiMBean.register}" value="Imprimir" class="btn btn-default" style="margin-left:10px;"/>
-			<h:commandButton action="#{pdiMBean.register}" value="Enviar por e-mail" class="btn btn-default" style="margin-left:10px;"/>
+			<h:commandButton action="#{generatePdiMBean.save}" value="Salvar" class="btn btn-primary" />
+			<h:commandButton action="#{generatePdiMBean.save}" value="Imprimir" class="btn btn-default" style="margin-left:10px;" />
+			<h:commandButton action="#{generatePdiMBean.save}" value="Enviar por e-mail" class="btn btn-default" style="margin-left:10px;" />
 
 			<br />
 			<br />

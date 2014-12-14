@@ -24,49 +24,56 @@
 			<div class="row row-label">
 				<div class="col-md-12">
 					<h:outputLabel value="Preencha o seu e-mail:" />
-					<h:inputText value="#{pdiMBean.pdi.name}" class="form-control" />
+					<h:inputText value="#{myPdiMBean.pdi.user.email}" class="form-control" />
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel value="Preencha o seu nome:" />
+					<h:inputText value="#{myPdiMBean.pdi.user.name}" class="form-control" />
 				</div>
 			</div>
 
 			<div class="row row-label">
 				<div class="col-md-12">
 					<h:outputLabel value="Quais são os seus pontos fortes?" />
-					<h:inputTextarea value="#{pdiMBean.pdi.positivePoints}" class="form-control" rows="4"/>
+					<h:inputTextarea value="#{myPdiMBean.pdi.positivePoints}" class="form-control" rows="4"/>
 				</div>
 			</div>
 
 			<div class="row row-label">
 				<div class="col-md-12">
 					<h:outputLabel value="O que você ainda precisa melhorar?" />
-					<h:inputTextarea value="#{pdiMBean.pdi.pointsToImprove}" class="form-control" rows="4" />
+					<h:inputTextarea value="#{myPdiMBean.pdi.pointsToImprove}" class="form-control" rows="4" />
 				</div>
 			</div>
 
 			<div class="row row-label">
 				<div class="col-md-12">
-					<h:outputLabel value="O que você espera de sua carreira dentro de nossa empresa?" />
-					<h:inputTextarea value="#{pdiMBean.pdi.expectatives}" class="form-control" rows="4" />
+					<h:outputLabel value="Quais são seus próximos objetivos na sua carreira?" />
+					<h:inputTextarea value="#{myPdiMBean.pdi.nextGoals}" class="form-control" rows="4" />
 				</div>
 			</div>
 
 			<div class="row row-label">
 				<div class="col-md-12">
 					<h:outputLabel value="Defina ações e prazos para o próximo ano que o ajudarão a alcançar seus objetivos:" />
-					<h:inputTextarea value="#{pdiMBean.pdi.actions}" class="form-control" rows="4" />
+					<h:inputTextarea value="#{myPdiMBean.pdi.actions}" class="form-control" rows="4" />
 				</div>
 			</div>
 
 			<div class="row row-label">
 				<div class="col-md-12">
 					<h:outputLabel value="Como seu gestor pode ajudar em seu desenvolvimento?" />
-					<h:inputTextarea value="#{pdiMBean.pdi.whatManagerCanDo}" class="form-control" rows="4" />
+					<h:inputTextarea value="#{myPdiMBean.pdi.whatManagerCanDo}" class="form-control" rows="4" />
 				</div>
 			</div>
 
 			<br />
 
-			<h:commandButton action="#{pdiMBean.register}" value="Salvar e Enviar" class="btn btn-primary"/>
-			<h:commandButton action="#{pdiMBean.register}" value="Imprimir" class="btn btn-default" style="margin-left:10px;"/>
+			<h:commandButton action="#{myPdiMBean.save}" value="Salvar e Enviar" class="btn btn-primary"/>
+			<h:commandButton action="#{myPdiMBean.save}" value="Imprimir" class="btn btn-default" style="margin-left:10px;"/>
 
 			<br />
 			<br />
