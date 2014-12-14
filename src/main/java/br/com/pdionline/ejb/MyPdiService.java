@@ -1,25 +1,31 @@
 package br.com.pdionline.ejb;
 
 import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 import br.com.pdionline.entity.MyPdi;
-import br.com.pdionline.facade.ICrud;
+import br.com.pdionline.entity.User;
 
 import com.mongodb.BasicDBObject;
 
 @Stateless
 public class MyPdiService {
 
-	public ICrud<MyPdi> crud = null; // FacadeCrud.getInstance("teammemberpdi");
+	@PersistenceContext
+	private EntityManager em;
 
-	public MyPdi save(MyPdi pdi) {
+	public void save(MyPdi pdi) {
 
-		BasicDBObject object = new BasicDBObject();
-		object.put("positivepoints", pdi.getPositivePoints());
-		object.put("pointstoimprove", pdi.getPointsToImprove());
-		object.put("expectatives", pdi.getNextGoals());
-		object.put("actions", pdi.getActions());
-		MyPdi ret = (MyPdi) crud.create(object);
-		return ret;
+		User user = new User();
+		user.setEmail("aa");
+		user.setName("dsss");
+		user.setPassword("sss");
+
+		try {
+			this.em.persist(user);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
