@@ -14,7 +14,7 @@ import br.com.pdionline.ejb.MyPdiService;
 import br.com.pdionline.entity.MyPdi;
 
 @ManagedBean
-@ViewScoped
+@RequestScoped
 public class MyPdiMBean {
 
 	@Inject
