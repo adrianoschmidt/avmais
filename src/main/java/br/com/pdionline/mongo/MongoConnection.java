@@ -6,8 +6,7 @@ import com.mongodb.MongoClient;
 import java.net.UnknownHostException;
 
 public class MongoConnection {
-
-
+    
     // Variáveis para saber se esta local ou em prod
     private static final String URL_MONGO = System.getenv("OPENSHIFT_WILDFLY_DIR") != null ?
             System.getenv("OPENSHIFT_WILDFLY_DIR") : "localhost";
