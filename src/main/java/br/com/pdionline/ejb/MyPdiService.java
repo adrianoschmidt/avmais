@@ -11,19 +11,21 @@ import com.mongodb.BasicDBObject;
 @Stateless
 public class MyPdiService {
 
-	private final ICrud<MyPdi> crud = FacadeCrud.getInstance("teammemberpdi");
+	private final ICrud<MyPdi> crud = FacadeCrud.getInstance("mypdi");
 
 	public MyPdi save(MyPdi pdi) {
 
 		BasicDBObject object = new BasicDBObject();
-		object.put("positivepoints", pdi.getPositivePoints());
-		object.put("pointstoimprove", pdi.getPointsToImprove());
-		object.put("expectatives", pdi.getNextGoals());
+		object.put("positivePoints", pdi.getPositivePoints());
+		object.put("pointsToImprove", pdi.getPointsToImprove());
+		object.put("nextGoals", pdi.getNextGoals());
 		object.put("actions", pdi.getActions());
+		object.put("whatManagerCanDo", pdi.getWhatManagerCanDo());
 
 		BasicDBObject user = new BasicDBObject();
 
 		user.put("email", pdi.getUser().getEmail());
+		user.put("name", pdi.getUser().getName());
 		object.put("user",user);
 
 		MyPdi ret = (MyPdi) crud.create(object);
