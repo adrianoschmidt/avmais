@@ -4,9 +4,7 @@ import com.mongodb.BasicDBObject;
 
 import java.util.List;
 
-/**
- * Created by supero on 09/12/2014.
- */
+
 public interface ICrud<T> {
 
     List<T> findAll();

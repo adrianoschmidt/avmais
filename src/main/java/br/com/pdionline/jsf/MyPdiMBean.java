@@ -17,7 +17,7 @@ public class MyPdiMBean {
 	private MyPdi pdi = new MyPdi();
 
 	public void save() throws Exception {
-//		teamMemberBean.create(pdi);
+		teamMemberBean.save(pdi);
 	}
 
 	public MyPdi getPdi() {

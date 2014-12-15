@@ -6,9 +6,7 @@ import com.mongodb.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by supero on 09/12/2014.
- */
+
 public class FacadeCrud<T> implements ICrud{
 
     // FIELDS
