@@ -23,57 +23,57 @@
 
 			<div class="row row-label">
 				<div class="col-md-12">
-					<h:outputLabel value="Preencha o seu e-mail:" />
-					<h:inputText value="#{myPdiMBean.pdi.user.email}" class="form-control" />
+					<p:outputLabel value="Preencha o seu e-mail:" for="itEmail"/>
+					<p:inputText id="itEmail" value="#{myPdiMBean.pdi.user.email}" class="form-control" required="true" requiredMessage="Campo obrigatório: E-mail"/>
 				</div>
 			</div>
 
 			<div class="row row-label">
 				<div class="col-md-12">
-					<h:outputLabel value="Preencha o seu nome:" />
-					<h:inputText value="#{myPdiMBean.pdi.user.name}" class="form-control" />
+					<p:outputLabel value="Preencha o seu nome:" for="itName"/>
+					<p:inputText id="itName" value="#{myPdiMBean.pdi.user.name}" class="form-control" required="true" requiredMessage="Campo obrigatório: Nome"/>
 				</div>
 			</div>
 
 			<div class="row row-label">
 				<div class="col-md-12">
-					<h:outputLabel value="Quais são os seus pontos fortes?" />
-					<h:inputTextarea value="#{myPdiMBean.pdi.positivePoints}" class="form-control" rows="4"/>
+					<p:outputLabel value="Quais são os seus pontos fortes?" for="itPositivePoints"/>
+					<p:inputTextarea id="itPositivePoints" value="#{myPdiMBean.pdi.positivePoints}" class="form-control" rows="4" required="true" requiredMessage="Campo obrigatório: Pontos positivos"/>
 				</div>
 			</div>
 
 			<div class="row row-label">
 				<div class="col-md-12">
-					<h:outputLabel value="O que você ainda precisa melhorar?" />
-					<h:inputTextarea value="#{myPdiMBean.pdi.pointsToImprove}" class="form-control" rows="4" />
+					<p:outputLabel value="O que você ainda precisa melhorar?" for="itPointsToImprove"/>
+					<p:inputTextarea id="itPointsToImprove" value="#{myPdiMBean.pdi.pointsToImprove}" class="form-control" rows="4"  required="true" requiredMessage="Campo obrigatório: Pontos a melhorar"/>
 				</div>
 			</div>
 
 			<div class="row row-label">
 				<div class="col-md-12">
-					<h:outputLabel value="Quais são seus próximos objetivos na sua carreira?" />
-					<h:inputTextarea value="#{myPdiMBean.pdi.nextGoals}" class="form-control" rows="4" />
+					<p:outputLabel value="Quais são seus próximos objetivos na sua carreira?" for="itNextGoals"/>
+					<p:inputTextarea id="itNextGoals" value="#{myPdiMBean.pdi.nextGoals}" class="form-control" rows="4"  required="true" requiredMessage="Campo obrigatório: Próximos objetivos"/>
 				</div>
 			</div>
 
 			<div class="row row-label">
 				<div class="col-md-12">
-					<h:outputLabel value="Defina ações e prazos para o próximo ano que o ajudarão a alcançar seus objetivos:" />
-					<h:inputTextarea value="#{myPdiMBean.pdi.actions}" class="form-control" rows="4" />
+					<p:outputLabel value="Defina ações e prazos para o próximo ano que o ajudarão a alcançar seus objetivos:" for="itActions"/>
+					<p:inputTextarea id="itActions" value="#{myPdiMBean.pdi.actions}" class="form-control" rows="4"  required="true" requiredMessage="Campo obrigatório: Ações"/>
 				</div>
 			</div>
 
 			<div class="row row-label">
 				<div class="col-md-12">
-					<h:outputLabel value="Como seu gestor pode ajudar em seu desenvolvimento?" />
-					<h:inputTextarea value="#{myPdiMBean.pdi.whatManagerCanDo}" class="form-control" rows="4" />
+					<p:outputLabel value="Como seu gestor pode ajudar em seu desenvolvimento?" for="itWhatManagerCanDo"/>
+					<p:inputTextarea id="itWhatManagerCanDo" value="#{myPdiMBean.pdi.whatManagerCanDo}" class="form-control" rows="4"  required="true" requiredMessage="Campo obrigatório: Como seu gestor pode ajudar"/>
 				</div>
 			</div>
 
 			<br />
 
-			<h:commandButton action="#{myPdiMBean.save}" value="Salvar e Enviar" class="btn btn-primary"/>
-			<h:commandButton action="#{myPdiMBean.save}" value="Imprimir" class="btn btn-default" style="margin-left:10px;"/>
+			<p:commandButton action="#{myPdiMBean.save}" value="Salvar e Enviar" class="btn btn-primary" process="@form" update="@form"/>
+			<p:commandButton action="#{myPdiMBean.save}" value="Imprimir" class="btn btn-default" style="margin-left:10px;"/>
 
 			<br />
 			<br />

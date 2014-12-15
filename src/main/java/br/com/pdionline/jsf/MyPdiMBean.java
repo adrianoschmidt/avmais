@@ -1,23 +1,30 @@
 package br.com.pdionline.jsf;
 
-import javax.enterprise.context.RequestScoped;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 
 import br.com.pdionline.ejb.MyPdiService;
 import br.com.pdionline.entity.MyPdi;
 
 @ManagedBean
-@RequestScoped
+@ViewScoped
 public class MyPdiMBean {
 
 	@Inject
-	private MyPdiService teamMemberBean;
+	private MyPdiService myPdiService;
 
 	private MyPdi pdi = new MyPdi();
 
-	public void save() throws Exception {
-		teamMemberBean.save(pdi);
+	public String save() {
+		myPdiService.save(pdi);
+		return "meu-pdi-respondido.jsf";
 	}
 
 	public MyPdi getPdi() {
@@ -27,4 +34,5 @@ public class MyPdiMBean {
 	public void setPdi(MyPdi pdi) {
 		this.pdi = pdi;
 	}
+
 }
