@@ -28,22 +28,12 @@ public class MyPdiService {
 
 	public MyPdi save(MyPdi pdi) {
 
-		/*BasicDBObject object = new BasicDBObject();
-		object.put("positivepoints", pdi.getPositivePoints());
-		object.put("pointstoimprove", pdi.getPointsToImprove());
-		object.put("expectatives", pdi.getNextGoals());
-		object.put("actions", pdi.getActions());
-
-		BasicDBObject user = new BasicDBObject();
-
-		user.put("email", pdi.getUser().getEmail());
-		object.put("user",user);*/
-
 		try {
 			return crud.create(pdi);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return null;
+
 	}
 }

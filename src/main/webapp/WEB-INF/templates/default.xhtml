@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:ui="http://java.sun.com/jsf/facelets">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui">
 <h:head>
 	<title>PDI Online</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -8,17 +8,16 @@
 
 	<h:outputStylesheet name="bootstrap-3.3.1/bootstrap.min.css" />
 	<h:outputStylesheet name="bootstrap-3.3.1/bootstrap-theme.min.css" />
-	<h:outputScript name="bootstrap-3.3.1/jquery-1.11.1.min.js" />
 	<h:outputScript name="bootstrap-3.3.1/bootstrap.min.js" />
 
 </h:head>
 <h:body>
 
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="z-index:1000">
 	<div class="container">
 		<div class="navbar-header" style="margin-top: -10px; margin-left: 0px; width: 100%">
 			<center>
-			<h2 style="padding-top: 10px; padding-bottom: 10px; color: white">PDI Online - Plano de Desenvolvimento Individual (Predgel)</h2>
+			<h2 style="padding-top: 10px; padding-bottom: 10px; color: white">PDI Online - Plano de Desenvolvimento Individual (Elenco Predgel)</h2>
 			</center>
 		</div>
 	</div>
@@ -27,6 +26,8 @@
 	<br />
 	<br />
 	<br />
+
+	<p:growl id="messages" showSummary="false" showDetail="true" life="5000" autoUpdate="true" />
 
 	<ui:insert name="content">
 		[Template content will be inserted here]
