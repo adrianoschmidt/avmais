@@ -11,7 +11,7 @@ import com.mongodb.BasicDBObject;
 @Stateless
 public class MyPdiService {
 
-	private final ICrud<MyPdi> crud = FacadeCrud.getInstance("mypdi");
+	private final ICrud<MyPdi> crud = FacadeCrud.getInstance("MyPdi");
 
 	public MyPdi save(MyPdi pdi) {
 
