@@ -1,12 +1,17 @@
 package br.com.pdionline.entity;
 
+import org.mongojack.Id;
+import org.mongojack.ObjectId;
+
 import java.io.Serializable;
 
 public class MyPdi implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private Long id;
+	@Id
+	@ObjectId
+	protected String id;
 
 	private User user;
 
@@ -16,11 +21,11 @@ public class MyPdi implements Serializable {
 	private String actions;
 	private String whatManagerCanDo;
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
