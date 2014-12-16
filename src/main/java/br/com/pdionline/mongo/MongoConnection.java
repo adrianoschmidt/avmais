@@ -14,7 +14,6 @@ public class MongoConnection {
     private static final String PORTA = System.getenv("OPENSHIFT_MONGODB_DB_PORT") != null ?
             System.getenv("OPENSHIFT_MONGODB_DB_PORT") : "27017";
 
-
     public static DB getDB(){
 
         MongoClient mongoClient = null;
