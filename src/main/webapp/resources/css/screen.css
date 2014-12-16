@@ -1,0 +1,25 @@
+/* padding de toda a paginna */
+body {
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+/* Espaco para separar os itens de formulario */
+.row-label {
+	margin-top: 10px !important;
+}
+
+/* Estilo para o rodape, esta bem semlhante ao site do bootstrap */
+.bs-docs-footer {
+	padding-top: 20px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	color: #777;
+	text-align: center;
+	border-top: 1px solid #e5e5e5;
+}
+
+/* Sobrescrevendo o primefaces para não alterar o fundo do label quando aplica o estilo do required. */
+.ui-outputlabel {
+	background: white;
+}

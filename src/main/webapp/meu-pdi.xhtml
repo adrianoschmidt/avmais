@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:ui="http://java.sun.com/jsf/facelets" 
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html" 
+	template="/WEB-INF/templates/default.xhtml">
+
+	<ui:define name="content">
+		<h2 class="page-header">Meu PDI</h2>
+		
+		<br/>
+		
+		<p> Agora você vai preencher alguns dados sobre você e sobre seus objetivos. </p>
+		<p> Outras pessoas (seu gestor por exemplo, colegas de trabalho e RH) farão o mesmo com o objetivo de avaliar você e te ajudar a alcançar seus objetivos. </p>
+		<p> Ao final do processo você terá uma lista de ações e prazos para você realizar durante o próximo ano. </p>
+		<p> No final do ano será feita uma nova avaliação para ver o cumprimento das metas propostas e já pensar no ano seguinte. </p>
+		<p> Lembre-se: <b>O PDI serve para ajudar você a se conhecer melhor e poder crescer profissionalmente.</b> Aproveite! </p>
+
+		<h:form id="reg">
+			<br />
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<p:outputLabel value="Preencha o seu e-mail:" for="itEmail"/>
+					<p:inputText id="itEmail" value="#{myPdiMBean.pdi.user.email}" class="form-control" required="true" requiredMessage="Campo obrigatório: E-mail"/>
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<p:outputLabel value="Preencha o seu nome:" for="itName"/>
+					<p:inputText id="itName" value="#{myPdiMBean.pdi.user.name}" class="form-control" required="true" requiredMessage="Campo obrigatório: Nome"/>
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<p:outputLabel value="Quais são os seus pontos fortes?" for="itPositivePoints"/>
+					<p:inputTextarea id="itPositivePoints" value="#{myPdiMBean.pdi.positivePoints}" class="form-control" rows="4" required="true" requiredMessage="Campo obrigatório: Pontos positivos"/>
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<p:outputLabel value="O que você ainda precisa melhorar?" for="itPointsToImprove"/>
+					<p:inputTextarea id="itPointsToImprove" value="#{myPdiMBean.pdi.pointsToImprove}" class="form-control" rows="4"  required="true" requiredMessage="Campo obrigatório: Pontos a melhorar"/>
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<p:outputLabel value="Quais são seus próximos objetivos na sua carreira?" for="itNextGoals"/>
+					<p:inputTextarea id="itNextGoals" value="#{myPdiMBean.pdi.nextGoals}" class="form-control" rows="4"  required="true" requiredMessage="Campo obrigatório: Próximos objetivos"/>
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<p:outputLabel value="Defina ações e prazos para o próximo ano que o ajudarão a alcançar seus objetivos:" for="itActions"/>
+					<p:inputTextarea id="itActions" value="#{myPdiMBean.pdi.actions}" class="form-control" rows="4"  required="true" requiredMessage="Campo obrigatório: Ações"/>
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<p:outputLabel value="Como seu gestor pode ajudar em seu desenvolvimento?" for="itWhatManagerCanDo"/>
+					<p:inputTextarea id="itWhatManagerCanDo" value="#{myPdiMBean.pdi.whatManagerCanDo}" class="form-control" rows="4"  required="true" requiredMessage="Campo obrigatório: Como seu gestor pode ajudar"/>
+				</div>
+			</div>
+
+			<br />
+
+			<p:commandButton action="#{myPdiMBean.save}" value="Salvar e Enviar" class="btn btn-primary" process="@form" update="@form"/>
+			<p:commandButton action="#{myPdiMBean.save}" value="Imprimir" class="btn btn-default" style="margin-left:10px;"/>
+
+			<br />
+			<br />
+
+		</h:form>
+	</ui:define>
+</ui:composition>
