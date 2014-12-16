@@ -4,17 +4,17 @@ import java.io.IOException;
 
 import javax.ejb.Stateless;
 
-import br.com.pdionline.entity.MyPdi;
+import br.com.pdionline.entity.Pdi;
 import br.com.pdionline.facade.ICrud;
 
 import com.mongodb.MongoException;
 
 @Stateless
-public class MyPdiService {
+public class GeneratePdiService {
 
-	private final ICrud<MyPdi> crud = ICrud.getInstance(MyPdi.class);
+	private final ICrud<Pdi> crud = ICrud.getInstance(Pdi.class);
 
-	public void save(MyPdi pdi) throws MongoException, IOException {
+	public void save(Pdi pdi) throws MongoException, IOException {
 		crud.create(pdi);
 	}
 }

@@ -2,11 +2,16 @@ package br.com.pdionline.entity;
 
 import java.io.Serializable;
 
+import org.mongojack.Id;
+import org.mongojack.ObjectId;
+
 public class EvaluationPdi implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private Long id;
+	@Id
+	@ObjectId
+	protected String id;
 
 	private User userEvaluator;
 	private User userEvaluated;
@@ -17,11 +22,11 @@ public class EvaluationPdi implements Serializable {
 	private String indications;
 	private String tipsForDailyBehavior;
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

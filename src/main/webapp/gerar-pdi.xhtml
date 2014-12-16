@@ -19,7 +19,7 @@
 			<div class="row row-label">
 				<div class="col-md-12">
 					<h:outputLabel value="Escolha a pessoa que você vai gerar o PDI:" />
-					<h:selectOneMenu value="#{generatePdiMBean.pdi.userEvaluated}" styleClass="form-control">
+					<h:selectOneMenu value="#{generatePdiMBean.pdi.userEvaluated}" styleClass="form-control" converter="userConverter">
 						<f:selectItem noSelectionOption="true" itemLabel="Selecione..." />
 						<f:selectItems value="#{generatePdiMBean.users}" var="user" itemValue="#{user}" itemLabel="#{user.name}" />
 					</h:selectOneMenu>
