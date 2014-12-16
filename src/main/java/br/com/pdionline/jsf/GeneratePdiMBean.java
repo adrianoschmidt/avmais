@@ -33,12 +33,12 @@ public class GeneratePdiMBean {
 	}
 
 	public List<User> getUsers() {
-		List<User> users = new ArrayList<User>();
+		List<User> users = new ArrayList<>();
 		
 		User user1 = new User();
 		user1.setName("Carlos Silva Fernandes");
 		users.add(user1);
-		
+
 		User user2 = new User();
 		user2.setName("José Silveira Duffeck");
 		users.add(user2);
