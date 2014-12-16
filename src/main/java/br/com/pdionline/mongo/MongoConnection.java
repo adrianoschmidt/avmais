@@ -13,8 +13,8 @@ public class MongoConnection {
     private static final MongoCredential credential = MongoCredential.createCredential("admin", "avmais", "3i3_Ui6Z1u4x".toCharArray());
 
     // Variáveis para saber se esta local ou em prod
-    private static final String URL_MONGO = System.getenv("OPENSHIFT_WILDFLY_DIR") != null ?
-            System.getenv("OPENSHIFT_WILDFLY_DIR") : "localhost";
+    private static final String URL_MONGO = System.getenv("OPENSHIFT_MONGODB_DB_HOST") != null ?
+            System.getenv("OPENSHIFT_MONGODB_DB_HOST") : "localhost";
 
     private static final String PORTA = System.getenv("OPENSHIFT_MONGODB_DB_PORT") != null ?
             System.getenv("OPENSHIFT_MONGODB_DB_PORT") : "27017";
