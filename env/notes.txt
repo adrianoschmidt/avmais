@@ -1,0 +1,15 @@
+Adicione o jar do postgre que esta nessa pasta na sua pasta deployments do wildfly
+
+Rode o comando abaixo para ter acesso ao banco de dados no openshift:
+	rhc port-forward -a avmais
+
+Adicione o datasource no seu standalone.xml
+
+<datasource jndi-name="java:jboss/datasources/PostgreDS" pool-name="PostgreDS" enabled="true" use-java-context="true">
+    <connection-url>jdbc:postgresql://127.0.0.1:5432/avmais</connection-url>
+    <driver>postgresql-9.3-1102.jdbc4.jar</driver>
+    <security>
+        <user-name>adminsp2zhyc</user-name>
+        <password>F9zt-QHyqv3i</password>
+    </security>
+</datasource>

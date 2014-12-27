@@ -33,8 +33,8 @@ public class UserConverter implements Converter, Serializable {
 			// adiciona item como atributo do componente
 			this.addAttribute(component, entity);
 
-			String codigo = entity.getId();
-			return codigo;
+			Long codigo = entity.getId();
+			return codigo.toString();
 		}
 
 		return (String) value;
