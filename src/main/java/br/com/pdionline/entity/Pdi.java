@@ -15,13 +15,13 @@ public class Pdi implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne(cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
 	private User userThatGenerateThePdi;
-	
-	@ManyToOne(cascade=CascadeType.ALL)
+
+	@ManyToOne(cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
 	private User userEvaluated;
 
 	private String positivePoints;

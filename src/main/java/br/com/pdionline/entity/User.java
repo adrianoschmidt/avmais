@@ -2,10 +2,12 @@ package br.com.pdionline.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -17,6 +19,9 @@ public class User implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	private Long id;
+
+	@ManyToOne(cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+	private Organization organization;
 
 	private String email;
 	private String name;
@@ -30,6 +35,14 @@ public class User implements Serializable {
 		this.id = id;
 	}
 
+	public Organization getOrganization() {
+		return organization;
+	}
+	
+	public void setOrganization(Organization organization) {
+		this.organization = organization;
+	}
+	
 	public String getEmail() {
 		return email;
 	}

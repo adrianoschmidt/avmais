@@ -17,8 +17,8 @@ public class MyPdi implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	private Long id;
-
-	@ManyToOne(cascade=CascadeType.ALL)
+	
+	@ManyToOne(cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
 	private User user;
 
 	private String positivePoints;
@@ -34,7 +34,7 @@ public class MyPdi implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
+	
 	public User getUser() {
 		if (user == null) {
 			user = new User();

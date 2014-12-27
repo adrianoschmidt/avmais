@@ -17,11 +17,11 @@ public class EvaluationPdi implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	private Long id;
-
-	@ManyToOne(cascade=CascadeType.ALL)
+	
+	@ManyToOne(cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
 	private User userEvaluator;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne(cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
 	private User userEvaluated;
 
 	private String positivePoints;
