@@ -1,18 +1,24 @@
 package br.com.pdionline.entity;
 
-import org.mongojack.Id;
-import org.mongojack.ObjectId;
-
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
 public class MyPdi implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@ObjectId
-	protected String id;
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
+	private Long id;
 
+	@ManyToOne(cascade=CascadeType.ALL)
 	private User user;
 
 	private String positivePoints;
@@ -21,11 +27,11 @@ public class MyPdi implements Serializable {
 	private String actions;
 	private String whatManagerCanDo;
 
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
