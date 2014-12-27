@@ -1,3 +1,5 @@
+Adicione o jar do postgre que está nessa pasta na sua pasta deployments do wildfly
+
 Rode o comando abaixo para ter acesso ao banco de dados no openshift:
 	rhc port-forward -a avmais
 
