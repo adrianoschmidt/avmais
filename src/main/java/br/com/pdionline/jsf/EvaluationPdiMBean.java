@@ -40,6 +40,6 @@ public class EvaluationPdiMBean {
 	}
 
 	public List<User> getUsers() {
-		return this.userService.findUsers();
+		return this.userService.findAll();
 	}
 }

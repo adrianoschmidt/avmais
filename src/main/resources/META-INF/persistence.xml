@@ -5,13 +5,16 @@
        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 	
         <jta-data-source>java:jboss/datasources/PostgreDS</jta-data-source>
-        <properties>
+        <properties>	
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.format_sql" value="true" />
             <property name="hibernate.use_sql_comments" value="false" />
             <property name="hibernate.archive.autodetection" value="class, hbm" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <!-- 
             <property name="hibernate.hbm2ddl.auto" value="create-drop" />
+            -->
         </properties>
     </persistence-unit>
 </persistence>

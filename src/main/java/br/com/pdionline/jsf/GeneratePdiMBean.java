@@ -37,7 +37,7 @@ public class GeneratePdiMBean {
 
 	public List<User> getUsers() {
 
-		return this.userService.findUsers();
+		return this.userService.findAll();
 
 	}
 }
