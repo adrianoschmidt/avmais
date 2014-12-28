@@ -1,7 +1,5 @@
 package br.com.pdionline.jsf;
 
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.enterprise.context.RequestScoped;
@@ -12,8 +10,6 @@ import br.com.pdionline.ejb.EvaluationPdiService;
 import br.com.pdionline.ejb.UserService;
 import br.com.pdionline.entity.EvaluationPdi;
 import br.com.pdionline.entity.User;
-
-import com.mongodb.MongoException;
 
 @ManagedBean
 @RequestScoped
@@ -27,7 +23,7 @@ public class EvaluationPdiMBean {
 
 	private EvaluationPdi pdi = new EvaluationPdi();
 
-	public void save() throws MongoException, IOException {
+	public void save() {
 		service.save(pdi);
 	}
 

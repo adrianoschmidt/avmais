@@ -23,7 +23,7 @@ public class GeneratePdiMBean {
 
 	private Pdi pdi = new Pdi();
 
-	public void save() throws Exception {
+	public void save() {
 		service.save(pdi);
 	}
 

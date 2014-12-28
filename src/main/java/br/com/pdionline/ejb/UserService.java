@@ -16,7 +16,6 @@ public class UserService {
 
 	public List<User> findAll() {
 		List<User> users = this.em.createQuery("SELECT o FROM User o").getResultList();
-
 		return users;
 	}
 
