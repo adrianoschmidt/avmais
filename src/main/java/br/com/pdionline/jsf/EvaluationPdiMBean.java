@@ -16,15 +16,17 @@ import br.com.pdionline.entity.User;
 public class EvaluationPdiMBean {
 
 	@Inject
-	private EvaluationPdiService service;
+	private EvaluationPdiService evaluationPdiService;
 	
 	@Inject
 	private UserService userService;
 
 	private EvaluationPdi pdi = new EvaluationPdi();
+	
+	public void save(){
+		
+		evaluationPdiService.save(pdi);
 
-	public void save() {
-		service.save(pdi);
 	}
 
 	public EvaluationPdi getPdi() {

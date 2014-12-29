@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui" xmlns:h="http://java.sun.com/jsf/html" template="/WEB-INF/templates/default.xhtml">
+
+	<ui:define name="content">
+		<h2 class="page-header">Avaliando outra pessoa</h2>
+
+		<br />
+
+		<p>Cadastre aqui seu quadro de colaboradores.</p>
+
+		<h:form id="reg">
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel  value="Nome:" />
+					<h:inputText value="#{teamMemberMB.user.name}" class="form-control" />
+				</div>
+			</div>
+
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel  value="Email:" />
+					<h:inputText value="#{teamMemberMB.user.email}" class="form-control" />
+				</div>
+			</div>
+
+			<br />
+
+			<h:commandButton action="#{teamMemberMB.save}" value="Salvar" class="btn btn-primary" />
+
+
+		</h:form>
+	</ui:define>
+</ui:composition>
