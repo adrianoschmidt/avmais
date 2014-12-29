@@ -2,33 +2,55 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui" xmlns:h="http://java.sun.com/jsf/html" template="/WEB-INF/templates/default.xhtml">
 
 	<ui:define name="content">
-		<h2 class="page-header">Avaliando outra pessoa</h2>
+		<h2 class="page-header">Cadastro de colaboradores</h2>
 
 		<br />
 
 		<p>Cadastre aqui seu quadro de colaboradores.</p>
+		<p:layout>
 
-		<h:form id="reg">
+			<p:layoutUnit position="west" size="650">
+	
+				<h:form id="reg">
+	
+					<div class="row row-label">
+						<div class="col-md-12">
+							<h:outputLabel  value="Nome:" />
+							<h:inputText value="#{teamMemberMB.user.name}" class="form-control" />
+						</div>
+					</div>
+	
+					<div class="row row-label">
+						<div class="col-md-12">
+							<h:outputLabel  value="Email:" />
+							<h:inputText value="#{teamMemberMB.user.email}" class="form-control" />
+						</div>
+					</div>
+	
+					<br />
+	
+					<h:commandButton action="#{teamMemberMB.save}" value="Salvar" class="btn btn-primary" />
+	
+	
+				</h:form>
+			
+			</p:layoutUnit>
+			<p:layoutUnit position="center" size="600">
+	
+				<p:outputLabel value="Avaliadores:" for="themes" />
+				<p:autoComplete id="themes" multiple="true" var="user" converter="userConverter"
+								itemLabel="#{user.name}" itemValue="#{user}"
+								value="#{teamMemberMB.autoCompleteUsers}"
+								completeMethod="#{teamMemberMB.completMethodUser}"
+								  forceSelection="true">
 
-			<div class="row row-label">
-				<div class="col-md-12">
-					<h:outputLabel  value="Nome:" />
-					<h:inputText value="#{teamMemberMB.user.name}" class="form-control" />
-				</div>
-			</div>
-
-			<div class="row row-label">
-				<div class="col-md-12">
-					<h:outputLabel  value="Email:" />
-					<h:inputText value="#{teamMemberMB.user.email}" class="form-control" />
-				</div>
-			</div>
-
-			<br />
-
-			<h:commandButton action="#{teamMemberMB.save}" value="Salvar" class="btn btn-primary" />
+					<p:column>
+						<h:outputText value="#{user.name}" />
+					</p:column>
+					</p:autoComplete>
 
 
-		</h:form>
+			</p:layoutUnit>
+		</p:layout>
 	</ui:define>
 </ui:composition>
