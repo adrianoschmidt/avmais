@@ -22,14 +22,11 @@ public class EvaluationPdiMBean {
 	private UserService userService;
 
 	private EvaluationPdi pdi = new EvaluationPdi();
-
-<<<<<<< HEAD
-	public void save() throws MongoException, IOException {
+	
+	public void save(){
+		
 		evaluationPdiService.save(pdi);
-=======
-	public void save() {
-		service.save(pdi);
->>>>>>> 5248238bbccd3bda707c42b387b44c37102884b1
+
 	}
 
 	public EvaluationPdi getPdi() {
