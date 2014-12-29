@@ -15,9 +15,14 @@ public class UserService {
 	private EntityManager em;
 
 	public List<User> findAll() {
+<<<<<<< HEAD
 
 		return em.createQuery("SELECT o FROM User o").getResultList();
 
+=======
+		List<User> users = this.em.createQuery("SELECT o FROM User o").getResultList();
+		return users;
+>>>>>>> 5248238bbccd3bda707c42b387b44c37102884b1
 	}
 
 	public User getById(Long userEvaluatedId) {

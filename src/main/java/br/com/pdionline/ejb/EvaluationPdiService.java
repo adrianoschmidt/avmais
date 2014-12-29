@@ -1,7 +1,5 @@
 package br.com.pdionline.ejb;
 
-import java.io.IOException;
-
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
@@ -9,8 +7,6 @@ import javax.persistence.PersistenceContext;
 
 import br.com.pdionline.entity.EvaluationPdi;
 import br.com.pdionline.entity.User;
-
-import com.mongodb.MongoException;
 
 @Stateless
 public class EvaluationPdiService {

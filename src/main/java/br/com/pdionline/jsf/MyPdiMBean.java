@@ -1,12 +1,10 @@
 package br.com.pdionline.jsf;
 
-import java.io.IOException;
-
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
-
-import com.mongodb.MongoException;
 
 import br.com.pdionline.ejb.MyPdiService;
 import br.com.pdionline.entity.MyPdi;
@@ -20,8 +18,13 @@ public class MyPdiMBean {
 
 	private MyPdi pdi = new MyPdi();
 
-	public String save() throws MongoException, IOException {
-		myPdiService.save(pdi);
+	public String save() {
+		String errors = myPdiService.save(pdi);
+		if (errors != null) {
+			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(errors));
+			return null;
+		}
+
 		return "meu-pdi-respondido.jsf";
 	}
 
