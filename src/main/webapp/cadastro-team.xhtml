@@ -8,23 +8,25 @@
 
 		<p>Cadastre aqui seu quadro de colaboradores.</p>
 
-		<h:form>
+		<h:form id="reg">
 
-			<h:panelGrid rowClasses="row row-label" columns="2" cellpadding="5">
-				<h:outputLabel for="username" value="Username:" />
-				<p:inputText id="username" value="#{teamMemberMB.user.name}" required="true" label="username" />
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel  value="Nome:" />
+					<h:inputText value="#{teamMemberMB.user.name}" class="form-control" />
+				</div>
+			</div>
 
-				<h:outputLabel for="password" value="Password:" />
-				<p:password id="password" value="#{teamMemberMB.user.password}" required="true" label="password" />
+			<div class="row row-label">
+				<div class="col-md-12">
+					<h:outputLabel  value="Email:" />
+					<h:inputText value="#{teamMemberMB.user.email}" class="form-control" />
+				</div>
+			</div>
 
-				<f:facet name="footer">
-					<p:commandButton value="Login" update="@form" actionListener="#{teamMemberMB.login}"
-									 oncomplete="handleLoginRequest(xhr, status, args)" />
-				</f:facet>
-			</h:panelGrid>
+			<br />
 
-			<h:commandButton action="#{evaluationPdiMBean.save}" value="Salvar e Enviar" class="btn btn-primary" />
-			<h:commandButton action="#{evaluationPdiMBean.save}" value="Imprimir" class="btn btn-default" style="margin-left:10px;" />
+			<h:commandButton action="#{teamMemberMB.save}" value="Salvar" class="btn btn-primary" />
 
 
 		</h:form>

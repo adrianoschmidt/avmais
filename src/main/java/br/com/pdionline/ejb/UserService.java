@@ -25,4 +25,10 @@ public class UserService {
 		return em.find(User.class, userEvaluatedId);
 
 	}
+	
+	public void create(User user){
+		
+		em.persist(user);
+		
+	}
 }
