@@ -15,13 +15,14 @@ public class UserService {
 	private EntityManager em;
 
 	public List<User> findAll() {
-		List<User> users = this.em.createQuery("SELECT o FROM User o").getResultList();
 
-		return users;
+		return em.createQuery("SELECT o FROM User o").getResultList();
+
 	}
 
 	public User getById(Long userEvaluatedId) {
-		User user = this.em.find(User.class, userEvaluatedId);
-		return user;
+
+		return em.find(User.class, userEvaluatedId);
+
 	}
 }

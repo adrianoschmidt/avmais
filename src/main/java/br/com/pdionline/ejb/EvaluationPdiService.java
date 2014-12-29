@@ -21,7 +21,7 @@ public class EvaluationPdiService {
 	@Inject
 	private UserService userService;
 
-	public void save(EvaluationPdi pdi) throws MongoException, IOException {
+	public void save(EvaluationPdi pdi) {
 		// resolvendo: detached entity passed to persist
 		// FIXME: Resolver com flush ou alguma solucao mais elegante
 		Long userEvaluatedId = pdi.getUserEvaluated().getId();

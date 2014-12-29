@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui" xmlns:h="http://java.sun.com/jsf/html" template="/WEB-INF/templates/default.xhtml">
+
+	<ui:define name="content">
+		<h2 class="page-header">Avaliando outra pessoa</h2>
+
+		<br />
+
+		<p>Cadastre aqui seu quadro de colaboradores.</p>
+
+		<h:form>
+
+			<h:panelGrid rowClasses="row row-label" columns="2" cellpadding="5">
+				<h:outputLabel for="username" value="Username:" />
+				<p:inputText id="username" value="#{teamMemberMB.user.name}" required="true" label="username" />
+
+				<h:outputLabel for="password" value="Password:" />
+				<p:password id="password" value="#{teamMemberMB.user.password}" required="true" label="password" />
+
+				<f:facet name="footer">
+					<p:commandButton value="Login" update="@form" actionListener="#{teamMemberMB.login}"
+									 oncomplete="handleLoginRequest(xhr, status, args)" />
+				</f:facet>
+			</h:panelGrid>
+
+			<h:commandButton action="#{evaluationPdiMBean.save}" value="Salvar e Enviar" class="btn btn-primary" />
+			<h:commandButton action="#{evaluationPdiMBean.save}" value="Imprimir" class="btn btn-default" style="margin-left:10px;" />
+
+
+		</h:form>
+	</ui:define>
+</ui:composition>

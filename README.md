@@ -1,9 +1,11 @@
+** SSH **
+--------
+rhc ssh -a avmais -n avmais
 
-
-The OpenShift `jbossas` cartridge documentation can be found at:
+**The OpenShift `jbossas` cartridge documentation can be found at:**
 
 https://github.com/openshift/origin-server/tree/master/cartridges/openshift-origin-cartridge-jbossas/README.md
-=======
+
 PDI
 
 Comandos úteis:

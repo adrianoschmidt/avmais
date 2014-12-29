@@ -20,7 +20,7 @@ import com.mongodb.MongoException;
 public class EvaluationPdiMBean {
 
 	@Inject
-	private EvaluationPdiService service;
+	private EvaluationPdiService evaluationPdiService;
 	
 	@Inject
 	private UserService userService;
@@ -28,7 +28,7 @@ public class EvaluationPdiMBean {
 	private EvaluationPdi pdi = new EvaluationPdi();
 
 	public void save() throws MongoException, IOException {
-		service.save(pdi);
+		evaluationPdiService.save(pdi);
 	}
 
 	public EvaluationPdi getPdi() {
