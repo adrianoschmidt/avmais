@@ -12,9 +12,10 @@
             <property name="hibernate.use_sql_comments" value="false" />
             <property name="hibernate.archive.autodetection" value="class, hbm" />
             <!-- somente deve ser descomentado quando for necessario regerar o banco, o update apeas atualiza colunas e tabelas novas, o create-drop deleta tudo (inclusive dados) e cria novamente
-            <property name="hibernate.hbm2ddl.auto" value="update" />
             -->
-            <property name="hibernate.hbm2ddl.auto" value="create-drop" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            
+            <!--<property name="hibernate.hbm2ddl.auto" value="create-drop" />-->
             
         </properties>
     </persistence-unit>
