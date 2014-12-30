@@ -23,3 +23,12 @@ body {
 .ui-outputlabel {
 	background: white;
 }
+
+/* container (painel) para textos como observacoes */
+.bs-callout {
+	padding: 15px;
+	border: 2px solid #eee;
+	border-left-width: 5px;
+	border-radius: 3px;
+	border-left-color: #5bc0de;
+}
