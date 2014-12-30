@@ -37,17 +37,28 @@
 			</p:layoutUnit>
 			<p:layoutUnit position="center" size="600">
 	
-				<p:outputLabel value="Avaliadores:" for="themes" />
-				<p:autoComplete id="themes" multiple="true" var="user" converter="userConverter"
-								itemLabel="#{user.name}" itemValue="#{user}"
-								value="#{teamMemberMB.autoCompleteUsers}"
-								completeMethod="#{teamMemberMB.completMethodUser}"
-								  forceSelection="true">
+				<h:form>
+					<p:outputLabel value="Avaliado por:" for="themes" />
+					<p:autoComplete id="themes" multiple="true" var="user" converter="userConverter"
+									itemLabel="#{user.name}" itemValue="#{user}"
+									value="#{teamMemberMB.autoCompleteUsers}"
+									completeMethod="#{teamMemberMB.completMethodUser}"
+									forceSelection="true">
 
-					<p:column>
-						<h:outputText value="#{user.name}" />
-					</p:column>
+
 					</p:autoComplete>
+
+					<p:outputLabel value="Avalia quem:" for="themes2" />
+					<p:autoComplete id="themes2" multiple="true" var="user" converter="userConverter"
+									itemLabel="#{user.name}" itemValue="#{user}"
+									value="#{teamMemberMB.autoCompleteUsers}"
+									completeMethod="#{teamMemberMB.completMethodUser}"
+									forceSelection="true">
+
+
+					</p:autoComplete>
+				</h:form>
+
 
 
 			</p:layoutUnit>
