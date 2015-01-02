@@ -41,7 +41,7 @@ public class UserService {
 				.setParameter("nome",user.getName())
 				.getSingleResult();
 		
-		
+		jaExiste = (Long) object > 0;
 
 		if(jaExiste){
 			return "Usuário já existe";
@@ -52,6 +52,12 @@ public class UserService {
 		
 		return null;
 		
+	}
+
+	public User update(User user){
+
+		return em.merge(user);
+
 	}
 	
 	public List<User> buscaPorNome(String query){

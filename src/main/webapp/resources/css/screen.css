@@ -1,3 +1,4 @@
+
 /* padding de toda a paginna */
 body {
 	padding-right: 30px;
@@ -19,7 +20,7 @@ body {
 	border-top: 1px solid #e5e5e5;
 }
 
-/* Sobrescrevendo o primefaces para não alterar o fundo do label quando aplica o estilo do required. */
+/* Sobrescrevendo o primefaces para nï¿½o alterar o fundo do label quando aplica o estilo do required. */
 .ui-outputlabel {
 	background: white;
 }

@@ -1,6 +1,7 @@
 package br.com.pdionline.jsf.converter;
 
 import br.com.pdionline.ejb.UserService;
+import br.com.pdionline.entity.EvaluationRelationship;
 import br.com.pdionline.entity.User;
 import org.primefaces.model.DashboardColumn;
 import org.primefaces.model.DashboardModel;
@@ -29,6 +30,10 @@ public class TeamMemberMB {
     private DashboardModel model;
     
     private List<User> autoCompleteUsers;
+    
+    //
+
+    private List<User> evalUsers;
 
     public  String  save(){
 
@@ -37,6 +42,22 @@ public class TeamMemberMB {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(errors));
             return null;
         }
+
+        user = userService.buscaPorNome(user.getName()).get(0);
+
+        List<EvaluationRelationship> evaluationRelationships = new ArrayList<>();
+
+        if(evalUsers != null)
+            for(User user : evalUsers){
+
+                EvaluationRelationship relationship = new EvaluationRelationship();
+                relationship.setAvalia(user);
+                evaluationRelationships.add(relationship);
+            }
+
+        user.setEvalRelationship(evaluationRelationships);
+        userService.update(user);
+        
         FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Usuário adicionado com sucesso."));
         return null;
 
@@ -73,5 +94,13 @@ public class TeamMemberMB {
 
     public void setAutoCompleteUsers(List<User> autoCompleteUsers) {
         this.autoCompleteUsers = autoCompleteUsers;
+    }
+
+    public List<User> getEvalUsers() {
+        return evalUsers;
+    }
+
+    public void setEvalUsers(List<User> evalUsers) {
+        this.evalUsers = evalUsers;
     }
 }

@@ -2,66 +2,71 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui" xmlns:h="http://java.sun.com/jsf/html" template="/WEB-INF/templates/default.xhtml">
 
 	<ui:define name="content">
+		
+		<h:outputStylesheet library="css" name="primefaces-override.css"  />
+		
 		<h2 class="page-header">Cadastro de colaboradores</h2>
 
 		<br />
 
 		<p>Cadastre aqui seu quadro de colaboradores.</p>
-		<p:layout>
+		<h:form id="reg">
 
-			<p:layoutUnit position="west" size="650">
-	
-				<h:form id="reg">
-	
-					<div class="row row-label">
-						<div class="col-md-8">
-							<h:outputLabel  value="Nome:" />
-							<h:inputText value="#{teamMemberMB.user.name}" class="form-control" />
+			<p:layout>
+
+				<p:layoutUnit position="west" size="650">
+
+
+						<div class="row row-label">
+							<div class="col-md-8">
+								<h:outputLabel  value="Nome:" />
+								<h:inputText value="#{teamMemberMB.user.name}" class="form-control" />
+							</div>
 						</div>
-					</div>
-	
-					<div class="row row-label">
-						<div class="col-md-8">
-							<h:outputLabel  value="Email:" />
-							<h:inputText value="#{teamMemberMB.user.email}" class="form-control" />
+
+						<div class="row row-label">
+							<div class="col-md-8">
+								<h:outputLabel  value="Email:" />
+								<h:inputText value="#{teamMemberMB.user.email}" class="form-control" />
+							</div>
 						</div>
-					</div>
-	
-					<br />
-	
-					<h:commandButton action="#{teamMemberMB.save}" value="Salvar" class="btn btn-primary" />
-	
-	
-				</h:form>
-			
-			</p:layoutUnit>
-			<p:layoutUnit position="center" size="600">
-	
-				<h:form>
-					<p:outputLabel value="Avaliado por:" for="themes" />
-					<p:autoComplete id="themes" multiple="true" var="user" converter="userConverter"
-									itemLabel="#{user.name}" itemValue="#{user}"
-									value="#{teamMemberMB.autoCompleteUsers}"
-									completeMethod="#{teamMemberMB.completMethodUser}"
-									forceSelection="true">
 
+						<br />
 
-					</p:autoComplete>
-
-					<p:outputLabel value="Avalia quem:" for="themes2" />
-					<p:autoComplete id="themes2" multiple="true" var="user" converter="userConverter"
-									itemLabel="#{user.name}" itemValue="#{user}"
-									value="#{teamMemberMB.autoCompleteUsers}"
-									completeMethod="#{teamMemberMB.completMethodUser}"
-									forceSelection="true">
-
-
-					</p:autoComplete>
-				</h:form>
+						<h:commandButton action="#{teamMemberMB.save}" value="Salvar" class="btn btn-primary" />
 
 
 
-			</p:layoutUnit>
-		</p:layout>
+
+				</p:layoutUnit>
+				<p:layoutUnit position="center" size="600">
+
+
+						<p:outputLabel value="Avaliado por:" for="themes" />
+						<p:autoComplete id="themes" multiple="true" var="user" converter="userConverter"
+										itemLabel="#{user.name}" itemValue="#{user}"
+										value="#{teamMemberMB.autoCompleteUsers}"
+										completeMethod="#{teamMemberMB.completMethodUser}"
+										forceSelection="true">
+
+
+						</p:autoComplete>
+
+						<p:outputLabel value="Avalia quem:" for="themes2" />
+						<p:autoComplete id="themes2" multiple="true" var="user" converter="userConverter"
+										itemLabel="#{user.name}" itemValue="#{user}"
+										value="#{teamMemberMB.evalUsers}"
+										completeMethod="#{teamMemberMB.completMethodUser}"
+										forceSelection="true">
+
+
+						</p:autoComplete>
+
+
+
+
+				</p:layoutUnit>
+			</p:layout>
+		</h:form>
 	</ui:define>
 </ui:composition>
