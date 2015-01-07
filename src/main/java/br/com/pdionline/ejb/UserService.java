@@ -36,7 +36,7 @@ public class UserService {
 				"select count(o.id) " +
 				"from User o " +
 				"where o.email = :email " +
-				"or o.name = :nome ")
+				"and o.name = :nome ")
 				.setParameter("email",user.getEmail())
 				.setParameter("nome",user.getName())
 				.getSingleResult();
@@ -46,6 +46,27 @@ public class UserService {
 		if(jaExiste){
 			return "Usuário já existe";
 		}else{
+/*
+			user.setEvaluated(null);
+			user.setEvaluator(null);
+			em.persist(user);
+			em.flush();
+*/
+			if(user.getEvaluated() != null) {
+
+				User evaluated = em.find(User.class, user.getEvaluated().get(0).getId());
+				User evaluator = em.find(User.class, user.getEvaluator().get(0).getId());
+
+				List<User> listEvaluated = new ArrayList<User>();
+				listEvaluated.add(evaluated);
+
+				List<User> listEvaluator = new ArrayList<User>();
+				listEvaluator.add(evaluator);
+
+				user.setEvaluated(listEvaluated);
+				user.setEvaluator(listEvaluator);
+			}
+				
 			em.persist(user);
 		}
 

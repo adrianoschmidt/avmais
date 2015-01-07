@@ -3,6 +3,7 @@ package br.com.pdionline.entity;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -22,9 +23,23 @@ public class User implements Serializable {
 	@ManyToOne(cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
 	private Organization organization;
 
-	@OneToMany(mappedBy = "avalia")
-	private List<EvaluationRelationship> evalRelationship = new ArrayList<>();
+	@JoinTable(name = "evaluationrelationship", 
+			joinColumns = {
+				@JoinColumn(name = "avaliador_id", referencedColumnName = "id", nullable = false)}, 
+			inverseJoinColumns = {
+				@JoinColumn(name = "avaliado_id", referencedColumnName = "id", nullable = false)})
+	@ManyToMany(cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+	private List<User> evaluator;
 
+
+	@JoinTable(name = "evaluationrelationship",
+			joinColumns = {
+					@JoinColumn(name = "avaliado_id", referencedColumnName = "id", nullable = false)},
+			inverseJoinColumns = {
+					@JoinColumn(name = "avaliador_id", referencedColumnName = "id", nullable = false)})
+	@ManyToMany(cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+	private List<User> evaluated;
+	
 	private String email;
 	private String name;
 	private String password;
@@ -103,14 +118,19 @@ public class User implements Serializable {
 		this.password = password;
 	}
 
-	public List<EvaluationRelationship> getEvalRelationship() {
-		return evalRelationship;
+	public List<User> getEvaluator() {
+		return evaluator;
 	}
 
-	public void setEvalRelationship(List<EvaluationRelationship> evalRelationship) {
-		this.evalRelationship = evalRelationship;
+	public void setEvaluator(List<User> evaluator) {
+		this.evaluator = evaluator;
 	}
 
-	
+	public List<User> getEvaluated() {
+		return evaluated;
+	}
 
+	public void setEvaluated(List<User> evaluated) {
+		this.evaluated = evaluated;
+	}
 }

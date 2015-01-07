@@ -36,8 +36,6 @@
 						<h:commandButton action="#{teamMemberMB.save}" value="Salvar" class="btn btn-primary" />
 
 
-
-
 				</p:layoutUnit>
 				<p:layoutUnit position="center" size="600">
 
@@ -45,7 +43,7 @@
 						<p:outputLabel value="Avaliado por:" for="themes" />
 						<p:autoComplete id="themes" multiple="true" var="user" converter="userConverter"
 										itemLabel="#{user.name}" itemValue="#{user}"
-										value="#{teamMemberMB.autoCompleteUsers}"
+										value="#{teamMemberMB.evaluateds}"
 										completeMethod="#{teamMemberMB.completMethodUser}"
 										forceSelection="true">
 
@@ -55,7 +53,7 @@
 						<p:outputLabel value="Avalia quem:" for="themes2" />
 						<p:autoComplete id="themes2" multiple="true" var="user" converter="userConverter"
 										itemLabel="#{user.name}" itemValue="#{user}"
-										value="#{teamMemberMB.evalUsers}"
+										value="#{teamMemberMB.evaluators}"
 										completeMethod="#{teamMemberMB.completMethodUser}"
 										forceSelection="true">
 

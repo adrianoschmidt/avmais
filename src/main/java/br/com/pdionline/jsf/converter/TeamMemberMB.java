@@ -26,16 +26,26 @@ public class TeamMemberMB {
     private UserService userService;
     
     private User user = new User();
-    
-    private DashboardModel model;
-    
-    private List<User> autoCompleteUsers;
-    
-    //
 
-    private List<User> evalUsers;
+    /**
+     * Lista de usuarios que podem ser inseridos na lista de avaliados ou avaliadores 
+     */
+    private List<User> autoCompleteUsers;
+
+    /**
+     * Lista de avaliadores selecionados 
+     */
+    private List<User> evaluators;
+
+    /**
+     * Lista de avaliados selecionados 
+     */
+    private List<User> evaluateds;
 
     public  String  save(){
+        
+        user.setEvaluator(evaluators);
+        user.setEvaluated(evaluateds);
 
         String errors = userService.create(user);
         if (errors != null) {
@@ -43,20 +53,6 @@ public class TeamMemberMB {
             return null;
         }
 
-        user = userService.buscaPorNome(user.getName()).get(0);
-
-        List<EvaluationRelationship> evaluationRelationships = new ArrayList<>();
-
-        if(evalUsers != null)
-            for(User user : evalUsers){
-
-                EvaluationRelationship relationship = new EvaluationRelationship();
-                relationship.setAvalia(user);
-                evaluationRelationships.add(relationship);
-            }
-
-        user.setEvalRelationship(evaluationRelationships);
-        userService.update(user);
         
         FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Usuário adicionado com sucesso."));
         return null;
@@ -70,22 +66,14 @@ public class TeamMemberMB {
         return userService.buscaPorNome(query);
         
     }
-    /* GETTERS N SETTERS*/
-    
+
+
     public User getUser() {
         return user;
     }
 
     public void setUser(User user) {
         this.user = user;
-    }
-
-    public DashboardModel getModel() {
-        return model;
-    }
-
-    public void setModel(DashboardModel model) {
-        this.model = model;
     }
 
     public List<User> getAutoCompleteUsers() {
@@ -96,11 +84,19 @@ public class TeamMemberMB {
         this.autoCompleteUsers = autoCompleteUsers;
     }
 
-    public List<User> getEvalUsers() {
-        return evalUsers;
+    public List<User> getEvaluators() {
+        return evaluators;
     }
 
-    public void setEvalUsers(List<User> evalUsers) {
-        this.evalUsers = evalUsers;
+    public void setEvaluators(List<User> evaluators) {
+        this.evaluators = evaluators;
+    }
+
+    public List<User> getEvaluateds() {
+        return evaluateds;
+    }
+
+    public void setEvaluateds(List<User> evaluateds) {
+        this.evaluateds = evaluateds;
     }
 }
