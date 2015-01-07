@@ -1,7 +1,6 @@
 package br.com.pdionline.jsf.converter;
 
 import br.com.pdionline.ejb.UserService;
-import br.com.pdionline.entity.EvaluationRelationship;
 import br.com.pdionline.entity.User;
 import org.primefaces.model.DashboardColumn;
 import org.primefaces.model.DashboardModel;
