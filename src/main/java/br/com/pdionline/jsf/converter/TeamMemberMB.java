@@ -25,6 +25,8 @@ public class TeamMemberMB {
     private UserService userService;
     
     private User user = new User();
+    
+    private List<User> userList = new ArrayList<>();
 
     /**
      * Lista de usuarios que podem ser inseridos na lista de avaliados ou avaliadores 
@@ -40,6 +42,15 @@ public class TeamMemberMB {
      * Lista de avaliados selecionados 
      */
     private List<User> evaluateds;
+    
+    
+    @PostConstruct
+    public void init(){
+
+        userList = userService.findAll();
+        
+    }
+    
 
     public  String  save(){
         
@@ -55,6 +66,22 @@ public class TeamMemberMB {
         
         FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Usuário adicionado com sucesso."));
         return null;
+
+    }
+    
+    public void edit(Long id){
+        
+        user = userService.getById(id);
+        user.getEvaluated().size();
+        user.getEvaluator().size();
+
+        
+    }
+
+    public void delete(Long id){
+
+        userService.delete(id);
+
 
     }
 
@@ -97,5 +124,13 @@ public class TeamMemberMB {
 
     public void setEvaluateds(List<User> evaluateds) {
         this.evaluateds = evaluateds;
+    }
+
+    public List<User> getUserList() {
+        return userList;
+    }
+
+    public void setUserList(List<User> userList) {
+        this.userList = userList;
     }
 }

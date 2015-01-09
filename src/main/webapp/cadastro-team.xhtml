@@ -3,7 +3,7 @@
 
 	<ui:define name="content">
 		
-		<h:outputStylesheet library="css" name="primefaces-override.css"  />
+		<h:outputStylesheet library="css" name="primefaces-override.css" />
 		
 		<h2 class="page-header">Cadastro de colaboradores</h2>
 
@@ -11,60 +11,67 @@
 
 		<p>Cadastre aqui seu quadro de colaboradores.</p>
 		<h:form id="reg">
+			
+			<p:panelGrid columns="3">
 
-			<p:layout>
+				<p:panelGrid columns="2">
 
-				<p:layoutUnit position="west" size="650">
-
-
-						<div class="row row-label">
-							<div class="col-md-8">
-								<h:outputLabel  value="Nome:" />
-								<h:inputText value="#{teamMemberMB.user.name}" class="form-control" />
-							</div>
-						</div>
-
-						<div class="row row-label">
-							<div class="col-md-8">
-								<h:outputLabel  value="Email:" />
-								<h:inputText value="#{teamMemberMB.user.email}" class="form-control" />
-							</div>
-						</div>
-
-						<br />
-
-						<h:commandButton action="#{teamMemberMB.save}" value="Salvar" class="btn btn-primary" />
-
-
-				</p:layoutUnit>
-				<p:layoutUnit position="center" size="600">
-
-
-						<p:outputLabel value="Avaliado por:" for="themes" />
-						<p:autoComplete id="themes" multiple="true" var="user" converter="userConverter"
-										itemLabel="#{user.name}" itemValue="#{user}"
-										value="#{teamMemberMB.evaluateds}"
-										completeMethod="#{teamMemberMB.completMethodUser}"
-										forceSelection="true">
-
-
-						</p:autoComplete>
-
-						<p:outputLabel value="Avalia quem:" for="themes2" />
-						<p:autoComplete id="themes2" multiple="true" var="user" converter="userConverter"
-										itemLabel="#{user.name}" itemValue="#{user}"
-										value="#{teamMemberMB.evaluators}"
-										completeMethod="#{teamMemberMB.completMethodUser}"
-										forceSelection="true">
-
-
-						</p:autoComplete>
+					<h:outputLabel  value="Nome:" />
+					<h:inputText value="#{teamMemberMB.user.name}" class="form-control" />
 
 
 
+					<h:outputLabel  value="Email:" />
+					<h:inputText value="#{teamMemberMB.user.email}" class="form-control" />
 
-				</p:layoutUnit>
-			</p:layout>
+
+					<p:commandButton action="#{teamMemberMB.save}" value="Salvar" class="btn btn-primary" update=":listUsers"  />
+				</p:panelGrid>
+
+				<p:panelGrid>
+
+					<p:outputLabel value="Avaliado por:" for="evaluateds" />
+					<p:autoComplete id="evaluateds" multiple="true" var="user" converter="userConverter"
+									itemLabel="#{user.name}" itemValue="#{user}"
+									value="#{teamMemberMB.evaluateds}"
+									completeMethod="#{teamMemberMB.completMethodUser}"
+									forceSelection="true">
+
+					</p:autoComplete>
+				</p:panelGrid>
+
+				<p:panelGrid>
+					<p:outputLabel value="Avalia quem:" for="evaluators" />
+					<p:autoComplete id="evaluators" multiple="true" var="user" converter="userConverter"
+									itemLabel="#{user.name}" itemValue="#{user}"
+									value="#{teamMemberMB.evaluators}"
+									completeMethod="#{teamMemberMB.completMethodUser}"
+									forceSelection="true">
+
+					</p:autoComplete>
+
+				</p:panelGrid>
+				
+				
+			</p:panelGrid>
+
+
 		</h:form>
+
+		<fieldset>
+			<p:dataTable id="listUsers" var="user" value="#{teamMemberMB.userList}">
+				<p:column>
+					<h:outputLabel value="Nome: " />
+					<h:outputText value="#{user.name}" />
+
+				</p:column>
+				<p:column>
+					<p:commandButton value="Editar" actionListener="#{teamMemberMB.edit(user.id)}" update=":reg" />
+				</p:column>
+				<p:column>
+					<p:commandButton value="Delete" actionListener="#{teamMemberMB.delete(user.id)}" update=":reg" />
+				</p:column>
+			</p:dataTable>
+		</fieldset>
 	</ui:define>
 </ui:composition>

@@ -6,3 +6,14 @@
     color: #265A88 !important;
     
 }
+
+.ui-autocomplete-multiple{
+    
+    
+}
+
+.ui-autocomplete-multiple input{
+    height: 140px;
+    vertical-align: top;
+
+}

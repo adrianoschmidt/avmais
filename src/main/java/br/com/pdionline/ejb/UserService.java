@@ -24,6 +24,8 @@ public class UserService {
 
 	public User getById(Long userEvaluatedId) {
 
+		//Session session = sessionFactory.openSession();
+
 		return em.find(User.class, userEvaluatedId);
 
 	}
@@ -80,6 +82,16 @@ public class UserService {
 		return em.merge(user);
 
 	}
+	
+	public void delete(Long id){
+		
+		Query query = em.createQuery(" delete from User where id = :id ");
+		query.setParameter("id",id);
+		
+		int res = query.executeUpdate();
+		
+	}
+	
 	
 	public List<User> buscaPorNome(String query){
 		
