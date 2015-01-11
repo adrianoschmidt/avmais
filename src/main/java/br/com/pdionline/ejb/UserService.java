@@ -69,7 +69,7 @@ public class UserService {
 				user.setEvaluator(listEvaluator);
 			}
 				
-			em.persist(user);
+				em.persist(user);
 		}
 
 		

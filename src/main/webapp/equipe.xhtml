@@ -25,7 +25,7 @@
 					<h:inputText value="#{teamMemberMB.user.email}" class="form-control" />
 
 
-					<p:commandButton action="#{teamMemberMB.save}" value="Salvar" class="btn btn-primary" update=":listUsers"  />
+					<p:commandButton process="@form" actionListener="#{teamMemberMB.save}" value="Salvar" class="btn btn-primary" update="@(.ui-datatable)"  />
 				</p:panelGrid>
 
 				<p:panelGrid>
@@ -56,22 +56,24 @@
 			</p:panelGrid>
 
 
-		</h:form>
+		
 
 		<fieldset>
 			<p:dataTable id="listUsers" var="user" value="#{teamMemberMB.userList}">
 				<p:column>
-					<h:outputLabel value="Nome: " />
+					<f:facet name="header">Nome</f:facet>
 					<h:outputText value="#{user.name}" />
 
 				</p:column>
 				<p:column>
-					<p:commandButton value="Editar" actionListener="#{teamMemberMB.edit(user.id)}" update=":reg" />
+					<p:commandLink value="Editar" action="#{teamMemberMB.edit(user.id)}" update="@(.ui-datatable)" />
 				</p:column>
 				<p:column>
-					<p:commandButton value="Delete" actionListener="#{teamMemberMB.delete(user.id)}" update=":reg" />
+					<p:commandLink value="Delete" action="#{teamMemberMB.delete(user.id)}" update="@(.ui-datatable)" />
 				</p:column>
 			</p:dataTable>
 		</fieldset>
+
+		</h:form>
 	</ui:define>
 </ui:composition>
