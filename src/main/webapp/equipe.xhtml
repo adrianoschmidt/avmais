@@ -25,7 +25,7 @@
 					<h:inputText value="#{teamMemberMB.user.email}" class="form-control" />
 
 
-					<p:commandButton process="@form" actionListener="#{teamMemberMB.save}" value="Salvar" class="btn btn-primary" update="@(.ui-datatable)"  />
+					<p:commandButton actionListener="#{teamMemberMB.save}" value="Salvar" class="btn btn-primary" update="listUsers @form"  />
 				</p:panelGrid>
 
 				<p:panelGrid>
@@ -33,8 +33,8 @@
 					<p:outputLabel value="Avaliado por:" for="evaluateds" />
 					<p:autoComplete id="evaluateds" multiple="true" var="user" converter="userConverter"
 									itemLabel="#{user.name}" itemValue="#{user}"
-									value="#{teamMemberMB.evaluateds}"
-									completeMethod="#{teamMemberMB.completMethodUser}"
+									value="#{teamMemberMB.user.evaluated}"
+									completeMethod="#{autoCompleteMB.completMethodUser}"
 									forceSelection="true">
 
 					</p:autoComplete>
@@ -44,32 +44,35 @@
 					<p:outputLabel value="Avalia quem:" for="evaluators" />
 					<p:autoComplete id="evaluators" multiple="true" var="user" converter="userConverter"
 									itemLabel="#{user.name}" itemValue="#{user}"
-									value="#{teamMemberMB.evaluators}"
-									completeMethod="#{teamMemberMB.completMethodUser}"
+									value="#{teamMemberMB.user.evaluator}"
+									completeMethod="#{autoCompleteMB.completeMethodUser(query,user)}"
 									forceSelection="true">
 
 					</p:autoComplete>
 
 				</p:panelGrid>
-				
-				
 			</p:panelGrid>
-
-
-		
-
+			
 		<fieldset>
-			<p:dataTable id="listUsers" var="user" value="#{teamMemberMB.userList}">
+			<p:dataTable styleClass="table" id="listUsers" var="user" value="#{teamMemberMB.userList}">
 				<p:column>
 					<f:facet name="header">Nome</f:facet>
 					<h:outputText value="#{user.name}" />
 
 				</p:column>
 				<p:column>
-					<p:commandLink value="Editar" action="#{teamMemberMB.edit(user.id)}" update="@(.ui-datatable)" />
+					<p:commandLink value="Editar" action="#{teamMemberMB.edit(user.id)}" update="@form" />
 				</p:column>
 				<p:column>
-					<p:commandLink value="Delete" action="#{teamMemberMB.delete(user.id)}" update="@(.ui-datatable)" />
+					<p:commandLink value="Remover" action="#{teamMemberMB.delete(user.id)}" update="listUsers">
+						<p:confirm header="Remover " message="Deseja realmente remover?" icon="ui-icon-alert" />
+					</p:commandLink>
+
+					<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+						<p:commandButton value="Sim" type="button" styleClass="ui-confirmdialog-yes" />
+						<p:commandButton value="Não" type="button" styleClass="ui-confirmdialog-no" />
+					</p:confirmDialog>
+
 				</p:column>
 			</p:dataTable>
 		</fieldset>

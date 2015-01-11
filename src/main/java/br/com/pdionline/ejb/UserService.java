@@ -24,9 +24,11 @@ public class UserService {
 
 	public User getById(Long userEvaluatedId) {
 
-		//Session session = sessionFactory.openSession();
+		User user = em.find(User.class, userEvaluatedId);
+		user.getEvaluated().size();
+		user.getEvaluator().size();
 
-		return em.find(User.class, userEvaluatedId);
+		return user;
 
 	}
 	
@@ -34,61 +36,51 @@ public class UserService {
 
 		boolean jaExiste = false;
 
-		Object object = em.createQuery("" +
-				"select count(o.id) " +
-				"from User o " +
-				"where o.email = :email " +
-				"and o.name = :nome ")
+		Object object = em.createQuery("select count(o.id) from User o where o.email = :email and o.name = :nome ")
 				.setParameter("email",user.getEmail())
 				.setParameter("nome",user.getName())
 				.getSingleResult();
 		
 		jaExiste = (Long) object > 0;
 
-		if(jaExiste){
+		if(jaExiste && user.getId() == null){
 			return "Usuário já existe";
 		}else{
-/*
-			user.setEvaluated(null);
-			user.setEvaluator(null);
-			em.persist(user);
-			em.flush();
-*/
-			if(user.getEvaluated() != null) {
 
-				User evaluated = em.find(User.class, user.getEvaluated().get(0).getId());
-				User evaluator = em.find(User.class, user.getEvaluator().get(0).getId());
-
+			if (user.getEvaluated() != null) {
 				List<User> listEvaluated = new ArrayList<User>();
-				listEvaluated.add(evaluated);
-
-				List<User> listEvaluator = new ArrayList<User>();
-				listEvaluator.add(evaluator);
-
+				for (User evaluated : user.getEvaluated()) {
+					listEvaluated.add(em.find(User.class, evaluated.getId()));
+				}
 				user.setEvaluated(listEvaluated);
+			}
+
+			if(user.getEvaluator() != null) {
+				List<User> listEvaluator = new ArrayList<User>();
+				for (User evaluator : user.getEvaluator()) {
+					listEvaluator.add(em.find(User.class, evaluator.getId()));
+				}
 				user.setEvaluator(listEvaluator);
 			}
-				
+
+			if(user.getId() == null)	
 				em.persist(user);
+			else{
+				em.merge(user);
+			}
 		}
 
 		
 		return null;
 		
 	}
-
-	public User update(User user){
-
-		return em.merge(user);
-
-	}
 	
 	public void delete(Long id){
 		
-		Query query = em.createQuery(" delete from User where id = :id ");
+		Query query = em.createQuery("delete from User where id = :id ");
 		query.setParameter("id",id);
 		
-		int res = query.executeUpdate();
+		query.executeUpdate();
 		
 	}
 	
@@ -103,6 +95,19 @@ public class UserService {
 		
 		return users;
 		
+	}
+
+	public List<User> buscaPorNome(String query, List<User> exceto){
+
+		List<User> users = new ArrayList<>();
+		Query usersByName = em.createQuery("select u from User u where u.name like :query and u not in :exceto");
+		usersByName.setParameter("query","%"+query+"%");
+		usersByName.setParameter("exceto",exceto);
+
+		users = usersByName.getResultList();
+
+		return users;
+
 	}
 	
 }
