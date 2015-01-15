@@ -8,7 +8,6 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -28,15 +27,10 @@ public class AutoCompleteMB {
      */
     private List<User> autoCompleteUsers;
 
-    
 
+    public List<User> completeMethodUser(String query){
 
-    public List<User> completeMethodUser(String query, User user){
-        
-        List<User> users = new ArrayList<>();
-        users.add(user);
-
-        return userService.buscaPorNome(query, users);
+        return userService.buscaPorNome(query);
         
     }
 

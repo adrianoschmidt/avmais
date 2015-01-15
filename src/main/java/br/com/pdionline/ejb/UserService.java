@@ -96,18 +96,5 @@ public class UserService {
 		return users;
 		
 	}
-
-	public List<User> buscaPorNome(String query, List<User> exceto){
-
-		List<User> users = new ArrayList<>();
-		Query usersByName = em.createQuery("select u from User u where u.name like :query and u not in :exceto");
-		usersByName.setParameter("query","%"+query+"%");
-		usersByName.setParameter("exceto",exceto);
-
-		users = usersByName.getResultList();
-
-		return users;
-
-	}
 	
 }

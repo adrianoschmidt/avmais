@@ -76,6 +76,8 @@ public class TeamMemberMB {
 
     public User getUser() {
         if(user == null) user = new User();
+        //if(user.getEvaluator().contains(user)) user.getEvaluator().remove(user);
+        //if(user.getEvaluator().contains(user)) user.getEvaluator().remove(user);
         return user;
     }
 

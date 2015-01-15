@@ -45,7 +45,7 @@
 					<p:autoComplete id="evaluators" multiple="true" var="user" converter="userConverter"
 									itemLabel="#{user.name}" itemValue="#{user}"
 									value="#{teamMemberMB.user.evaluator}"
-									completeMethod="#{autoCompleteMB.completeMethodUser(query,user)}"
+									completeMethod="#{autoCompleteMB.completeMethodUser}"
 									forceSelection="true">
 
 					</p:autoComplete>
