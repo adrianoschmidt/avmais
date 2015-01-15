@@ -1,0 +1,86 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1339" measuredH="810" mockupW="1339" mockupH="810">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="0" y="0" w="1017" h="810" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>AV%20Mais%0Ahttp%3A//www.avmais.com.br/equipe</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="22" y="98" w="-1" h="-1" measuredW="41" measuredH="21" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Equipe</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::HRule" x="22" y="119" w="967" h="-1" measuredW="100" measuredH="10" zOrder="4" locked="false" isInGroup="-1"/>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::DataGrid" x="35" y="168" w="944" h="195" measuredW="360" measuredH="201" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Nome%2C%20E-mail%2C%20A%E7%F5es%0AGiacomo%20Guilizzoni%2C%20aa@aa.com%2C%20visualizar%20editar%20excluir%0AGiacomo%20Guilizzoni%2C%20aa@aa.com%2C%20visualizar%20editar%20excluir%0AGiacomo%20Guilizzoni%2C%20aa@aa.com%2C%20visualizar%20editar%20excluir%0AGiacomo%20Guilizzoni%2C%20aa@aa.com%2C%20visualizar%20editar%20excluir%0AGiacomo%20Guilizzoni%2C%20aa@aa.com%2C%20visualizar%20editar%20excluir%0AGiacomo%20Guilizzoni%2C%20aa@aa.com%2C%20visualizar%20editar%20excluir%0A%7B30%2C%2025%2C%2015%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="35" y="418" w="-1" h="-1" measuredW="34" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Nome</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="35" y="473" w="-1" h="-1" measuredW="37" measuredH="21" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>E-mail</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::TextInput" x="35" y="439" w="276" h="-1" measuredW="79" measuredH="26" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::TextInput" x="35" y="501" w="276" h="-1" measuredW="79" measuredH="26" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Button" x="35" y="556" w="-1" h="-1" measuredW="60" measuredH="27" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Salvar</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::List" x="373" y="439" w="276" h="88" measuredW="100" measuredH="126" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Item%20One%0AItem%20Two%0AItem%20Three</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Label" x="373" y="418" w="-1" h="-1" measuredW="217" measuredH="21" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Avaliados%20%28Pessoas%20que%20ele%20avaliar%E1%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Label" x="697" y="418" w="-1" h="-1" measuredW="225" measuredH="21" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Avaliadores%20%28Pessoas%20que%20o%20avaliar%E3o%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::FieldSet" x="22" y="395" w="970" h="211" measuredW="200" measuredH="170" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Colaborador</text>
+      </controlProperties>
+    </control>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::FieldSet" x="22" y="144" w="970" h="238" measuredW="200" measuredH="170" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Colaboradores</text>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::List" x="697" y="439" w="276" h="88" measuredW="100" measuredH="126" zOrder="14" locked="false" isInGroup="-1"/>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::StickyNote" x="1062" y="453" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fazer%20watermark%20escrito%20%22Digite%20o%20nome%20do%20colaborador....%20Digite%20%25%20para%20ver%20todos%20os%20colaboradores%22</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::StickyNote" x="1047" y="159" w="292" h="123" measuredW="109" measuredH="123" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>No%20emptyMessage%20escrever%20%22Voc%EA%20ainda%20n%E3o%20cadastrou%20nenhum%20colaborar%2C%20cadastre%20no%20formul%E1rio%20abaixo.%22%0A%20%0Atamanho%20do%20grid%20-%207%20linhas</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::StickyNote" x="1186" y="453" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>No%20futuro%20fazer%20um%20link%20de%20%22Sele%E7%E3o%20avan%E7ada%22%20para%20facilitar%20o%20cadastro%20de%20avaliados%20e%20avaliadores%0A%20%0AFAzer%20o%20link%20%22Mais%20campos%22%20para%20permitir%20cargo%20e%20unidade%20ou%20%20campo%20%22tags%22%20onde%20o%20usu%E1rio%20poder%E1%20digitar%20o%20que%20quiser%3A%20desenvolvedor%2C%20floripa%2C%20junior%2C%20java%0A%20%0Afazer%20pesquisa%20no%20grid</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
