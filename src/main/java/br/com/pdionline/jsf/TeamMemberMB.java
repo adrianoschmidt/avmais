@@ -1,4 +1,4 @@
-package br.com.pdionline.jsf.converter;
+package br.com.pdionline.jsf;
 
 import br.com.pdionline.ejb.UserService;
 import br.com.pdionline.entity.User;
@@ -20,43 +20,26 @@ import java.util.List;
  * Created by gui on 28/12/14.
  */
 @ManagedBean
+@ViewScoped
 public class TeamMemberMB {
 
     @Inject
     private UserService userService;
     
-    private User user = new User();
+    private User user;
     
-    private List<User> userList = new ArrayList<>();
+    private List<User> userList;
 
-    /**
-     * Lista de usuarios que podem ser inseridos na lista de avaliados ou avaliadores 
-     */
-    private List<User> autoCompleteUsers;
 
-    /**
-     * Lista de avaliadores selecionados 
-     */
-    private List<User> evaluators;
-
-    /**
-     * Lista de avaliados selecionados 
-     */
-    private List<User> evaluateds;
-    
-    
     @PostConstruct
     public void init(){
 
         userList = userService.findAll();
-        
+
     }
-    
+
 
     public  String  save(){
-        
-        user.setEvaluator(evaluators);
-        user.setEvaluated(evaluateds);
 
         String errors = userService.create(user);
         if (errors != null) {
@@ -64,8 +47,11 @@ public class TeamMemberMB {
             return null;
         }
 
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Usuário salvo com sucesso."));
         
-        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Usuário adicionado com sucesso."));
+        user = new User();
+        init();
+        
         return null;
 
     }
@@ -73,58 +59,28 @@ public class TeamMemberMB {
     public void edit(Long id){
         
         user = userService.getById(id);
-        user.getEvaluated().size();
-        user.getEvaluator().size();
 
-        
     }
 
     public void delete(Long id){
 
         userService.delete(id);
 
-
-    }
-
-
-
-    public List<User> completMethodUser(String query){
-
-        return userService.buscaPorNome(query);
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Usuário removido com sucesso."));
+        
+        init();
         
     }
 
 
+
     public User getUser() {
+        if(user == null) user = new User();
         return user;
     }
 
     public void setUser(User user) {
         this.user = user;
-    }
-
-    public List<User> getAutoCompleteUsers() {
-        return autoCompleteUsers;
-    }
-
-    public void setAutoCompleteUsers(List<User> autoCompleteUsers) {
-        this.autoCompleteUsers = autoCompleteUsers;
-    }
-
-    public List<User> getEvaluators() {
-        return evaluators;
-    }
-
-    public void setEvaluators(List<User> evaluators) {
-        this.evaluators = evaluators;
-    }
-
-    public List<User> getEvaluateds() {
-        return evaluateds;
-    }
-
-    public void setEvaluateds(List<User> evaluateds) {
-        this.evaluateds = evaluateds;
     }
 
     public List<User> getUserList() {
