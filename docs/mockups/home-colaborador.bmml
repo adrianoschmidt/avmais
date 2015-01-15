@@ -1,0 +1,86 @@
+<mockup version="1.0" skin="wireframe" fontFace="Balsamiq Sans" measuredW="1337" measuredH="794" mockupW="1337" mockupH="794">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="108" y="0" w="1229" h="794" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::HRule" x="108" y="103" w="1214" h="-1" measuredW="100" measuredH="10" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="124" y="82" w="-1" h="-1" measuredW="313" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>AV%20Mais%20-%20Seu%20sistema%20de%20avalia%E7%F5es%20de%20desempenho</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::FieldSet" x="124" y="155" w="541" h="88" measuredW="200" measuredH="170" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Autoavalia%E7%F5o</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="135" y="174" w="-1" h="-1" measuredW="264" measuredH="21" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Voc%EA%20ainda%20n%E3o%20respondeu%20sua%20autoavalia%E7%E3o.</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::ButtonBar" x="125" y="120" w="1197" h="21" measuredW="346" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Home%2C%20Autoavalia%E7%E3o%2C%20Avalia%E7%E3o%20360%BA%2C%20Meu%20PDI</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="1281" y="82" w="-1" h="-1" measuredW="41" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Logout</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Button" x="136" y="202" w="-1" h="-1" measuredW="289" measuredH="24" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Clique%20aqui%20para%20responder%20sua%20autoavalia%E7%E3o</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::FieldSet" x="124" y="261" w="541" h="88" measuredW="200" measuredH="170" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Avalia%E7%E3o%20360%BA</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="135" y="280" w="-1" h="-1" measuredW="258" measuredH="21" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Voc%EA%20foi%20solicitado%20para%20avaliar%20%7B0%7D%20pessoas.</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Button" x="136" y="308" w="-1" h="-1" measuredW="176" measuredH="24" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Clique%20aqui%20para%20avali%E1-las</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::FieldSet" x="773" y="155" w="541" h="88" measuredW="200" measuredH="170" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Meu%20PDI</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="784" y="174" w="-1" h="-1" measuredW="227" measuredH="21" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Voc%EA%20ainda%20n%E3o%20tem%20nenhum%20PDI%20salvo.</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Button" x="785" y="202" w="-1" h="-1" measuredW="230" measuredH="24" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>disabled</state>
+        <text>Clique%20aqui%20para%20visualizar%20seu%20PDI</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::StickyNote" x="0" y="138" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Se%20a%20autoavalia%E7%E3o%20j%E1%20foi%20respondida%20trocar%20labels%3A%0A%20%0AParab%E9ns%21%20Voc%EA%20j%E1%20respondeu%20sua%20autoavalia%E7%E3o.%0AClique%20aqui%20para%20visualizar%20sua%20autoavalia%E7%E3o</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::StickyNote" x="1132" y="202" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Se%20j%E1%20tiver%20PDI%20trocar%20label%20e%20ativar%20bot%E3o%0A%20%0ASeu%20PDI%20j%E1%20foi%20criado.</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::StickyNote" x="475" y="335" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Se%20o%20usu%E1rio%20n%E3o%20foi%20solicitado%20para%20avaliar%20ningu%E9m%20n%E3o%20exibir%20esse%20field%20set</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

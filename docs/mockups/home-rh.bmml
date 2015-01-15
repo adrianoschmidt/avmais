@@ -1,117 +1,197 @@
-<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1337" measuredH="603" mockupW="1229" mockupH="603">
+<mockup version="1.0" skin="wireframe" fontFace="Balsamiq Sans" measuredW="1577" measuredH="794" mockupW="1577" mockupH="794">
   <controls>
-    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="108" y="0" w="1229" h="603" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="108" y="0" w="1229" h="794" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
         <text>A%20Web%20Page%0Ahttp%3A//</text>
       </controlProperties>
     </control>
     <control controlID="1" controlTypeID="com.balsamiq.mockups::HRule" x="108" y="103" w="1214" h="-1" measuredW="100" measuredH="10" zOrder="1" locked="false" isInGroup="-1"/>
-    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="115" y="82" w="-1" h="-1" measuredW="47" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="124" y="82" w="-1" h="-1" measuredW="313" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>AV%20Mais</text>
+        <text>AV%20Mais%20-%20Seu%20sistema%20de%20avalia%E7%F5es%20de%20desempenho</text>
       </controlProperties>
     </control>
-    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="150" y="406" w="-1" h="-1" measuredW="224" measuredH="21" zOrder="4" locked="false" isInGroup="-1">
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="150" y="440" w="-1" h="-1" measuredW="224" measuredH="21" zOrder="4" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Voc%EA%20ainda%20n%E3o%20cadastrou%20sua%20equipe.</text>
       </controlProperties>
     </control>
-    <control controlID="5" controlTypeID="com.balsamiq.mockups::FieldSet" x="135" y="381" w="317" h="179" measuredW="200" measuredH="170" zOrder="3" locked="false" isInGroup="-1">
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::FieldSet" x="124" y="415" w="328" h="96" measuredW="200" measuredH="170" zOrder="3" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Equipe</text>
       </controlProperties>
     </control>
-    <control controlID="6" controlTypeID="com.balsamiq.mockups::Button" x="150" y="438" w="-1" h="-1" measuredW="250" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Button" x="150" y="472" w="-1" h="-1" measuredW="249" measuredH="24" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Clique%20aqui%20para%20cadastrar%20sua%20equipe</text>
       </controlProperties>
     </control>
-    <control controlID="7" controlTypeID="com.balsamiq.mockups::FieldSet" x="124" y="128" w="1198" h="222" measuredW="200" measuredH="170" zOrder="6" locked="false" isInGroup="-1">
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::FieldSet" x="124" y="250" w="1198" h="152" measuredW="200" measuredH="170" zOrder="6" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Inicie%20as%20avalia%E7%F5es</text>
       </controlProperties>
     </control>
-    <control controlID="10" controlTypeID="com.balsamiq.mockups::Paragraph" x="135" y="182" w="343" h="45" measuredW="200" measuredH="80" zOrder="7" locked="false" isInGroup="-1">
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Paragraph" x="135" y="304" w="343" h="45" measuredW="200" measuredH="80" zOrder="7" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Envie%20o%20link%20abaixo%20para%20seus%20colaboradores%20fazerem%20sua%20autoavalia%E7%E3o.</text>
       </controlProperties>
     </control>
-    <control controlID="11" controlTypeID="com.balsamiq.mockups::Link" x="135" y="236" w="-1" h="-1" measuredW="343" measuredH="19" zOrder="8" locked="false" isInGroup="-1">
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Link" x="135" y="358" w="-1" h="-1" measuredW="343" measuredH="19" zOrder="8" locked="false" isInGroup="-1">
       <controlProperties>
         <text>http%3A//www.avmais.com.br/auto-avaliacao.jsf%3Forg%3DA4g67s</text>
       </controlProperties>
     </control>
-    <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="135" y="151" w="-1" h="-1" measuredW="79" measuredH="21" zOrder="9" locked="false" isInGroup="-1">
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="135" y="273" w="-1" h="-1" measuredW="79" measuredH="21" zOrder="9" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Autoavalia%E7%E3o</text>
       </controlProperties>
     </control>
-    <control controlID="14" controlTypeID="com.balsamiq.mockups::Paragraph" x="503" y="183" w="343" h="45" measuredW="200" measuredH="80" zOrder="10" locked="false" isInGroup="-1">
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Paragraph" x="503" y="305" w="343" h="87" measuredW="200" measuredH="80" zOrder="10" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Envie%20o%20link%20abaixo%20para%20seus%20colaboradores%20fazerem%20sua%20autoavalia%E7%E3o.</text>
+        <text>Ap%F3s%20a%20autoavalia%E7%E3o%20ter%20sido%20preenchida%2C%20e%20os%20avaliadores%20terem%20sido%20cadastrados%20%28clique%20aqui%20para%20cadastrar%20a%20equipe%29%20voc%EA%20pode%20solicitar%20aos%20avaliadores%20que%20acessem%20o%20AV%20Mais%20pelo%20link%20http%3A//www.avmais.com.br%20para%20responderem%20as%20avalia%E7%F5es.</text>
       </controlProperties>
     </control>
-    <control controlID="15" controlTypeID="com.balsamiq.mockups::Link" x="503" y="237" w="-1" h="-1" measuredW="343" measuredH="19" zOrder="11" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>http%3A//www.avmais.com.br/auto-avaliacao.jsf%3Forg%3DA4g67s</text>
-      </controlProperties>
-    </control>
-    <control controlID="16" controlTypeID="com.balsamiq.mockups::Label" x="503" y="152" w="-1" h="-1" measuredW="86" measuredH="21" zOrder="12" locked="false" isInGroup="-1">
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Label" x="503" y="274" w="-1" h="-1" measuredW="86" measuredH="21" zOrder="11" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Avalia%E7%E3o%20360%BA</text>
       </controlProperties>
     </control>
-    <control controlID="17" controlTypeID="com.balsamiq.mockups::Paragraph" x="914" y="183" w="343" h="45" measuredW="200" measuredH="80" zOrder="13" locked="false" isInGroup="-1">
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Paragraph" x="914" y="305" w="343" h="72" measuredW="200" measuredH="80" zOrder="12" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Ap%F3s%20o%20colaborador%20fazer%20sua%20autoavalia%E7%E3o%2C%20voc%EA%20j%E1%20pode%20iniciar%20o%20PDI%20dele%2C%20por%E9m%2C%20%E9%20mais%20interessante%20se%20voc%EA%20tamb%E9m%20realizou%20a%20avalia%E7%E3o%20360%BA%20para%20ter%20mais%20informa%E7%F5es%20na%20hora%20de%20gerar%20o%20PDI.</text>
       </controlProperties>
     </control>
-    <control controlID="19" controlTypeID="com.balsamiq.mockups::Label" x="914" y="152" w="-1" h="-1" measuredW="22" measuredH="21" zOrder="14" locked="false" isInGroup="-1">
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Label" x="914" y="274" w="-1" h="-1" measuredW="22" measuredH="21" zOrder="13" locked="false" isInGroup="-1">
       <controlProperties>
         <text>PDI</text>
       </controlProperties>
     </control>
-    <control controlID="20" controlTypeID="com.balsamiq.mockups::Button" x="914" y="242" w="-1" h="-1" measuredW="85" measuredH="27" zOrder="15" locked="false" isInGroup="-1">
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::Button" x="913" y="374" w="-1" h="-1" measuredW="84" measuredH="24" zOrder="14" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Iniciar%20PDI</text>
       </controlProperties>
     </control>
-    <control controlID="21" controlTypeID="com.balsamiq.mockups::FieldSet" x="516" y="381" w="806" h="179" measuredW="200" measuredH="170" zOrder="16" locked="false" isInGroup="-1">
+    <control controlID="21" controlTypeID="com.balsamiq.mockups::FieldSet" x="516" y="415" w="806" h="89" measuredW="200" measuredH="170" zOrder="15" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Visualizar%20avalia%E7%F5es</text>
       </controlProperties>
     </control>
-    <control controlID="22" controlTypeID="com.balsamiq.mockups::Label" x="531" y="406" w="-1" h="-1" measuredW="234" measuredH="21" zOrder="17" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>Visualizar%20autoavalia%E7%E3o%20do%20colaborador%3A</text>
-      </controlProperties>
-    </control>
-    <control controlID="23" controlTypeID="com.balsamiq.mockups::Button" x="983" y="403" w="-1" h="-1" measuredW="81" measuredH="27" zOrder="18" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>Visualizar</text>
-      </controlProperties>
-    </control>
-    <control controlID="24" controlTypeID="com.balsamiq.mockups::TextInput" x="780" y="403" w="180" h="-1" measuredW="79" measuredH="26" zOrder="19" locked="false" isInGroup="-1"/>
-    <control controlID="25" controlTypeID="com.balsamiq.mockups::Label" x="531" y="453" w="-1" h="-1" measuredW="242" measuredH="21" zOrder="20" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>Visualizar%20avalia%E7%E3o%20360%BA%20do%20colaborador%3A</text>
-      </controlProperties>
-    </control>
-    <control controlID="26" controlTypeID="com.balsamiq.mockups::TextInput" x="780" y="450" w="180" h="-1" measuredW="79" measuredH="26" zOrder="21" locked="false" isInGroup="-1"/>
-    <control controlID="27" controlTypeID="com.balsamiq.mockups::Button" x="983" y="450" w="-1" h="-1" measuredW="81" measuredH="27" zOrder="22" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>Visualizar</text>
-      </controlProperties>
-    </control>
-    <control controlID="28" controlTypeID="com.balsamiq.mockups::Label" x="531" y="498" w="-1" h="-1" measuredW="178" measuredH="21" zOrder="23" locked="false" isInGroup="-1">
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::Label" x="534" y="440" w="-1" h="-1" measuredW="178" measuredH="21" zOrder="16" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Visualizar%20PDI%20do%20colaborador%3A</text>
       </controlProperties>
     </control>
-    <control controlID="29" controlTypeID="com.balsamiq.mockups::TextInput" x="780" y="495" w="180" h="-1" measuredW="79" measuredH="26" zOrder="24" locked="false" isInGroup="-1"/>
-    <control controlID="30" controlTypeID="com.balsamiq.mockups::Button" x="983" y="495" w="-1" h="-1" measuredW="81" measuredH="27" zOrder="25" locked="false" isInGroup="-1">
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::TextInput" x="734" y="439" w="217" h="-1" measuredW="182" measuredH="24" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>disabled</state>
+        <text>Digite%20o%20nome%20do%20colaborador</text>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::Button" x="973" y="438" w="-1" h="-1" measuredW="80" measuredH="24" zOrder="18" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Visualizar</text>
+      </controlProperties>
+    </control>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::FieldSet" x="124" y="155" w="1198" h="88" measuredW="200" measuredH="170" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Empresa%20X</text>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::Label" x="135" y="174" w="-1" h="-1" measuredW="41" measuredH="21" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Miss%E3o</text>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::TextArea" x="135" y="196" w="313" h="40" measuredW="200" measuredH="140" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>disabled</state>
+        <text>Escreva%20aqui%20a%20miss%E3o%20da%20Empresa%20X</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::Label" x="502" y="174" w="-1" h="-1" measuredW="32" measuredH="21" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vis%E3o</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::TextArea" x="502" y="196" w="313" h="40" measuredW="200" measuredH="140" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>disabled</state>
+        <text>Escreva%20aqui%20a%20vis%E3o%20da%20Empresa%20X</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::Label" x="915" y="174" w="-1" h="-1" measuredW="43" measuredH="21" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Valores</text>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::TextArea" x="915" y="196" w="313" h="40" measuredW="200" measuredH="140" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>disabled</state>
+        <text>Escreva%20aqui%20os%20valores%20da%20Empresa%20X</text>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::HelpButton" x="177" y="175" w="-1" h="-1" measuredW="18" measuredH="18" zOrder="26" locked="false" isInGroup="-1"/>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::HelpButton" x="537" y="175" w="-1" h="-1" measuredW="18" measuredH="18" zOrder="27" locked="false" isInGroup="-1"/>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::HelpButton" x="960" y="175" w="-1" h="-1" measuredW="18" measuredH="18" zOrder="28" locked="false" isInGroup="-1"/>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::StickyNote" x="1356" y="91" w="206" h="135" measuredW="109" measuredH="123" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>TExto%20do%20help%20miss%E3o%3A%0AA%20miss%E3o%20%E9%20a%20raz%E3o%20da%20empresa%20existir%2C%20seu%20prop%F3sito.%20O%20que%20voc%EA%20produz%2C%20o%20que%20espera%20conquistar%20e%20como%20quer%20ser%20visto%20pelos%20clientes%20e%20demais%20pessoas%20envolvidas.%0A%20%0AExemplos%20de%20miss%E3o%3A%0A%20%0AFiat%0ADesenvolver%2C%20produzir%20e%20comercializar%20carros%20e%20servi%E7os%20que%20as%20pessoas%20prefiram%20comprar%20e%20tenham%20orgulho%20de%20possuir%2C%20garantindo%20a%20cria%E7%E3o%20de%20valor%20e%20a%20sustentabilidade%20do%20neg%F3cio.%0A%20%0AHSBC%0AGarantir%20a%20excel%EAncia%20na%20entrega%20de%20produtos%20e%20servi%E7os%20financeiros%2C%20maximizando%20valor%20para%20clientes%20e%20acionistas.%0A%20%0AGerdau%0AGerar%20valor%20para%20nossos%20clientes%2C%20acionistas%2C%20equipes%20e%20a%20sociedade%2C%20atuando%20na%20ind%FAstria%20do%20a%E7o%20de%20forma%20sustent%E1vel.</text>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::StickyNote" x="1368" y="25" w="209" h="51" measuredW="109" measuredH="123" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Os%20bot%F5es%20de%20help%20podem%20ser%20um%20i%20de%20informa%E7%E3o.</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::StickyNote" x="1356" y="240" w="206" h="103" measuredW="109" measuredH="123" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Texto%20da%20vis%E3o%3A%0A%20%0AA%20vis%E3o%20%E9%20a%20dire%E7%E3o%20desejada%2C%20o%20caminho%20que%20se%20pretende%20percorrer%2C%20uma%20proposta%20do%20que%20a%20empresa%20deseja%20ser%20a%20m%E9dio%20e%20longo%20prazo.%0A%20%0AExemplos%20de%20Vis%E3o%0A%20%0A%20Fiat%0AEstar%20entre%20os%20principais%20players%20do%20mercado%20e%20ser%20refer%EAncia%20de%20excel%EAncia%20em%20produtos%20e%20servi%E7os%20automobil%EDsticos.%0A%20%0A%20HSBC%0ASer%20o%20melhor%20grupo%20financeiro%20do%20Brasil%20em%20gera%E7%E3o%20de%20valor%20para%20clientes%2C%20acionistas%20e%20colaboradores.%0A%20%0A%20Gerdau%0ASer%20global%20e%20refer%EAncia%20nos%20neg%F3cios%20em%20que%20atua.</text>
+      </controlProperties>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::StickyNote" x="1356" y="358" w="206" h="123" measuredW="109" measuredH="123" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>TExto%20dos%20valores%3A%0A%20%0AOs%20valores%20s%E3o%20os%20princ%EDpios%20que%20guiam%20a%20vida%20da%20organiza%E7%E3o.%0A%20%0AExemplos%20de%20valores%3A%0A%20%0AFiat%0ASatisfa%E7%E3o%20do%20cliente%0AValoriza%E7%E3o%20e%20respeito%20%E0s%20pessoas%0AAtuar%20como%20parte%20integrante%20do%20Grupo%20Fiat%0AResponsabilidade%20social%0ARespeito%20ao%20Meio%20Ambiente%0A%20%0AHSBC%0ANossa%20conduta%20deve%20refletir%20os%20mais%20altos%20padr%F5es%20de%20%E9tica%3B%0ANossa%20comunica%E7%E3o%20deve%20ser%20clara%20e%20precisa%3B%0ANosso%20gerenciamento%20deve%20ser%20em%20equipe%2C%20consistente%20e%20focado%3B%0ANosso%20relacionamento%20com%20clientes%20e%20colaboradores%20deve%20ser%20transparente%20e%20baseado%20na%20responsabilidade%20e%20confian%E7a%20entre%20as%20partes.%0A%20%0AGerdau%0ATer%20a%20prefer%EAncia%20do%20CLIENTE%0ASEGURAN%C7A%20das%20pessoas%20acima%20de%20tudo%0APESSOAS%20respeitadas%2C%20comprometidas%20e%20realizadas%0AEXCEL%CANCIA%20com%20SIMPLICIDADE%0AFoco%20em%20RESULTADOS%0AINTEGRIDADE%20com%20todos%20os%20p%FAblicos%0ASUSTENTABILIDADE%20econ%F4mica%2C%20social%20e%20ambiental</text>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::ButtonBar" x="125" y="120" w="1197" h="21" measuredW="316" measuredH="21" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Home%2C%20Equipe%2C%20PDI%2C%20Visualizar%20Avalia%E7%F5es</text>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::Label" x="1281" y="82" w="-1" h="-1" measuredW="41" measuredH="21" zOrder="34" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Logout</text>
+      </controlProperties>
+    </control>
+    <control controlID="53" controlTypeID="com.balsamiq.mockups::StickyNote" x="0" y="438" w="135" h="123" measuredW="109" measuredH="123" zOrder="35" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>No%20field%20set%20%22Equipe%22%0A%20%0Ao%20label%20e%20o%20bot%E3o%20ser%E3o%20os%20do%20prot%F3tipo%20quando%20n%E3o%20tiver%20nenhum%20membro%20na%20equipe%20%28apenas%20o%20usu%E1rio%20logado%20na%20verdade%29%0A%20%0Acaso%20contr%E1rio%20ser%E1%3A%0AExistem%20%7B0%7D%20pessoas%20cadastradas%20na%20sua%20empresa%0A%20%0Ae%20o%20bot%E3o%20ter%E1%20o%20texto%20%22Clique%20aqui%20para%20visualizar%20e%20alterar%20sua%20equipe%22</text>
+      </controlProperties>
+    </control>
+    <control controlID="54" controlTypeID="com.balsamiq.mockups::FieldSet" x="124" y="525" w="516" h="141" measuredW="200" measuredH="170" zOrder="36" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Pr%F3ximas%20funcionalidades</text>
+      </controlProperties>
+    </control>
+    <control controlID="56" controlTypeID="com.balsamiq.mockups::Paragraph" x="135" y="546" w="494" h="112" measuredW="200" measuredH="80" zOrder="37" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Nossa%20equipe%20est%E1%20trabalhando%20para%20em%20breve%20oferecer%20para%20voc%EA%20aqui%20no%20AV%20Mais%20as%20seguintes%20funcionalidades%3A%0A-%20Gest%E3o%20por%20compet%EAncias%0A-%20Feedback%20Imediato%0A-%20Entrevista%20de%20desligamento%0A-%20Crie%20suas%20pr%F3prias%20quest%F5es%20para%20as%20avalia%E7%F5es%0A-%20Pesquisa%20de%20clima</text>
+      </controlProperties>
+    </control>
+    <control controlID="57" controlTypeID="com.balsamiq.mockups::FieldSet" x="743" y="525" w="571" h="141" measuredW="200" measuredH="170" zOrder="38" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>D%FAvidas%2C%20elogios%2C%20cr%EDticas%20e%20sugest%F5es</text>
+      </controlProperties>
+    </control>
+    <control controlID="58" controlTypeID="com.balsamiq.mockups::TextArea" x="758" y="546" w="541" h="112" measuredW="200" measuredH="140" zOrder="39" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>disabled</state>
+        <text>Escreva%20aqui%20a%20vis%E3o%20da%20Empresa%20X</text>
+      </controlProperties>
+    </control>
+    <control controlID="59" controlTypeID="com.balsamiq.mockups::StickyNote" x="1093" y="425" w="173" h="71" measuredW="109" measuredH="123" zOrder="40" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Redireciona%20para%20tela%20meu-pdi.jsf%20com%20o%20colaborador%20setado.</text>
       </controlProperties>
     </control>
   </controls>
