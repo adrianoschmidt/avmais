@@ -87,7 +87,7 @@ public class UserService {
 	
 	public List<User> buscaPorNome(String query){
 		
-		List<User> users = new ArrayList<>();
+		List<User> users = new ArrayList<User>();
 		Query usersByName = em.createQuery("select u from User u where u.name like :query");
 		usersByName.setParameter("query","%"+query+"%");
 		

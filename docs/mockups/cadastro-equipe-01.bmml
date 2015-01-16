@@ -1,4 +1,4 @@
-<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1339" measuredH="810" mockupW="1339" mockupH="810">
+<mockup version="1.0" skin="wireframe" fontFace="Balsamiq Sans" measuredW="1339" measuredH="810" mockupW="1339" mockupH="810">
   <controls>
     <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="0" y="0" w="1017" h="810" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
@@ -11,7 +11,7 @@
       </controlProperties>
     </control>
     <control controlID="2" controlTypeID="com.balsamiq.mockups::HRule" x="22" y="119" w="967" h="-1" measuredW="100" measuredH="10" zOrder="4" locked="false" isInGroup="-1"/>
-    <control controlID="3" controlTypeID="com.balsamiq.mockups::DataGrid" x="35" y="168" w="944" h="195" measuredW="360" measuredH="201" zOrder="5" locked="false" isInGroup="-1">
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::DataGrid" x="35" y="168" w="944" h="195" measuredW="360" measuredH="198" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Nome%2C%20E-mail%2C%20A%E7%F5es%0AGiacomo%20Guilizzoni%2C%20aa@aa.com%2C%20visualizar%20editar%20excluir%0AGiacomo%20Guilizzoni%2C%20aa@aa.com%2C%20visualizar%20editar%20excluir%0AGiacomo%20Guilizzoni%2C%20aa@aa.com%2C%20visualizar%20editar%20excluir%0AGiacomo%20Guilizzoni%2C%20aa@aa.com%2C%20visualizar%20editar%20excluir%0AGiacomo%20Guilizzoni%2C%20aa@aa.com%2C%20visualizar%20editar%20excluir%0AGiacomo%20Guilizzoni%2C%20aa@aa.com%2C%20visualizar%20editar%20excluir%0A%7B30%2C%2025%2C%2015%7D</text>
       </controlProperties>
@@ -26,17 +26,17 @@
         <text>E-mail</text>
       </controlProperties>
     </control>
-    <control controlID="6" controlTypeID="com.balsamiq.mockups::TextInput" x="35" y="439" w="276" h="-1" measuredW="79" measuredH="26" zOrder="8" locked="false" isInGroup="-1">
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::TextInput" x="35" y="439" w="276" h="-1" measuredW="79" measuredH="23" zOrder="8" locked="false" isInGroup="-1">
       <controlProperties>
         <text/>
       </controlProperties>
     </control>
-    <control controlID="7" controlTypeID="com.balsamiq.mockups::TextInput" x="35" y="501" w="276" h="-1" measuredW="79" measuredH="26" zOrder="9" locked="false" isInGroup="-1">
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::TextInput" x="35" y="501" w="276" h="-1" measuredW="79" measuredH="23" zOrder="9" locked="false" isInGroup="-1">
       <controlProperties>
         <text/>
       </controlProperties>
     </control>
-    <control controlID="8" controlTypeID="com.balsamiq.mockups::Button" x="35" y="556" w="-1" h="-1" measuredW="60" measuredH="27" zOrder="10" locked="false" isInGroup="-1">
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Button" x="35" y="556" w="-1" h="-1" measuredW="59" measuredH="24" zOrder="10" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Salvar</text>
       </controlProperties>
@@ -46,12 +46,12 @@
         <text>Item%20One%0AItem%20Two%0AItem%20Three</text>
       </controlProperties>
     </control>
-    <control controlID="16" controlTypeID="com.balsamiq.mockups::Label" x="373" y="418" w="-1" h="-1" measuredW="217" measuredH="21" zOrder="12" locked="false" isInGroup="-1">
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Label" x="373" y="418" w="-1" h="-1" measuredW="215" measuredH="21" zOrder="12" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Avaliados%20%28Pessoas%20que%20ele%20avaliar%E1%29</text>
       </controlProperties>
     </control>
-    <control controlID="18" controlTypeID="com.balsamiq.mockups::Label" x="697" y="418" w="-1" h="-1" measuredW="225" measuredH="21" zOrder="13" locked="false" isInGroup="-1">
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Label" x="697" y="418" w="-1" h="-1" measuredW="223" measuredH="21" zOrder="13" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Avaliadores%20%28Pessoas%20que%20o%20avaliar%E3o%29</text>
       </controlProperties>
@@ -67,7 +67,7 @@
       </controlProperties>
     </control>
     <control controlID="30" controlTypeID="com.balsamiq.mockups::List" x="697" y="439" w="276" h="88" measuredW="100" measuredH="126" zOrder="14" locked="false" isInGroup="-1"/>
-    <control controlID="37" controlTypeID="com.balsamiq.mockups::StickyNote" x="1062" y="453" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="15" locked="false" isInGroup="-1">
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::StickyNote" x="1050" y="391" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="15" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Fazer%20watermark%20escrito%20%22Digite%20o%20nome%20do%20colaborador....%20Digite%20%25%20para%20ver%20todos%20os%20colaboradores%22</text>
       </controlProperties>

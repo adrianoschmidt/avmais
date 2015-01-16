@@ -21,9 +21,9 @@
         <text>Voc%EA%20ainda%20n%E3o%20respondeu%20sua%20autoavalia%E7%E3o.</text>
       </controlProperties>
     </control>
-    <control controlID="5" controlTypeID="com.balsamiq.mockups::ButtonBar" x="125" y="120" w="1197" h="21" measuredW="346" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::ButtonBar" x="125" y="120" w="1197" h="21" measuredW="487" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Home%2C%20Autoavalia%E7%E3o%2C%20Avalia%E7%E3o%20360%BA%2C%20Meu%20PDI</text>
+        <text>Home%20do%20Colaborador%2C%20Autoavalia%E7%E3o%2C%20Avaliar%20outras%20pessoas%2C%20Meu%20PDI</text>
       </controlProperties>
     </control>
     <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="1281" y="82" w="-1" h="-1" measuredW="41" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
@@ -38,7 +38,7 @@
     </control>
     <control controlID="8" controlTypeID="com.balsamiq.mockups::FieldSet" x="124" y="261" w="541" h="88" measuredW="200" measuredH="170" zOrder="8" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Avalia%E7%E3o%20360%BA</text>
+        <text>Avaliar%20outras%20pessoas</text>
       </controlProperties>
     </control>
     <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="135" y="280" w="-1" h="-1" measuredW="258" measuredH="21" zOrder="9" locked="false" isInGroup="-1">
@@ -80,6 +80,12 @@
     <control controlID="16" controlTypeID="com.balsamiq.mockups::StickyNote" x="475" y="335" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="16" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Se%20o%20usu%E1rio%20n%E3o%20foi%20solicitado%20para%20avaliar%20ningu%E9m%20n%E3o%20exibir%20esse%20field%20set</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::HRule" x="108" y="741" w="1229" h="-1" measuredW="100" measuredH="10" zOrder="17" locked="false" isInGroup="-1"/>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Label" x="508" y="755" w="-1" h="-1" measuredW="367" measuredH="21" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Desenvolvido%20com%20todo%20o%20amor%20do%20mundo%20pela%20equipe%20AV%20Mais.</text>
       </controlProperties>
     </control>
   </controls>
