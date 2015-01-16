@@ -17,3 +17,8 @@
     vertical-align: top;
 
 }
+
+.ui-autocomplete-input-token input {
+    width: 100% !important;
+    
+}

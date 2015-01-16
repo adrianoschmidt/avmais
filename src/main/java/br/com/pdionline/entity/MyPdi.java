@@ -85,5 +85,7 @@ public class MyPdi implements Serializable {
 	public void setWhatManagerCanDo(String whatManagerCanDo) {
 		this.whatManagerCanDo = whatManagerCanDo;
 	}
+	
+	
 
 }

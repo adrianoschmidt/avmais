@@ -5,78 +5,100 @@
 		
 		<h:outputStylesheet library="css" name="primefaces-override.css" />
 		
-		<h2 class="page-header">Cadastro de colaboradores</h2>
+		<h2 class="page-header">Equipe</h2>
 
-		<br />
-
-		<p>Cadastre aqui seu quadro de colaboradores.</p>
-		<h:form id="reg">
-			
-			<p:panelGrid columns="3">
-
-				<p:panelGrid columns="2">
-
-					<h:outputLabel  value="Nome:" />
-					<h:inputText value="#{teamMemberMB.user.name}" class="form-control" />
-
-
-
-					<h:outputLabel  value="Email:" />
-					<h:inputText value="#{teamMemberMB.user.email}" class="form-control" />
-
-
-					<p:commandButton actionListener="#{teamMemberMB.save}" value="Salvar" class="btn btn-primary" update="listUsers @form"  />
-				</p:panelGrid>
-
-				<p:panelGrid>
-
-					<p:outputLabel value="Avaliado por:" for="evaluateds" />
-					<p:autoComplete id="evaluateds" multiple="true" var="user" converter="userConverter"
-									itemLabel="#{user.name}" itemValue="#{user}"
-									value="#{teamMemberMB.user.evaluated}"
-									completeMethod="#{autoCompleteMB.completMethodUser}"
-									forceSelection="true">
-
-					</p:autoComplete>
-				</p:panelGrid>
-
-				<p:panelGrid>
-					<p:outputLabel value="Avalia quem:" for="evaluators" />
-					<p:autoComplete id="evaluators" multiple="true" var="user" converter="userConverter"
-									itemLabel="#{user.name}" itemValue="#{user}"
-									value="#{teamMemberMB.user.evaluator}"
-									completeMethod="#{autoCompleteMB.completeMethodUser}"
-									forceSelection="true">
-
-					</p:autoComplete>
-
-				</p:panelGrid>
-			</p:panelGrid>
-			
+		
 		<fieldset>
-			<p:dataTable styleClass="table" id="listUsers" var="user" value="#{teamMemberMB.userList}">
-				<p:column>
-					<f:facet name="header">Nome</f:facet>
-					<h:outputText value="#{user.name}" />
+			<legend>Colaboradores</legend>
+			
+			<h:form id="frmUsers">
+				<p:dataTable emptyMessage="Você ainda não cadastrou nenhum colaborador, cadastre no formulário abaixo."
+							 styleClass="table" id="listUsers" var="user" value="#{teamMemberMB.userList}">
+					<p:column>
+						<f:facet name="header">Nome</f:facet>
+						<h:outputText value="#{user.name}" />
 
-				</p:column>
-				<p:column>
-					<p:commandLink value="Editar" action="#{teamMemberMB.edit(user.id)}" update="@form" />
-				</p:column>
-				<p:column>
-					<p:commandLink value="Remover" action="#{teamMemberMB.delete(user.id)}" update="listUsers">
-						<p:confirm header="Remover " message="Deseja realmente remover?" icon="ui-icon-alert" />
-					</p:commandLink>
+					</p:column>
+					<p:column>
+						<f:facet name="header">E-mail</f:facet>
+						<h:outputText value="#{user.email}" />
 
-					<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
-						<p:commandButton value="Sim" type="button" styleClass="ui-confirmdialog-yes" />
-						<p:commandButton value="Não" type="button" styleClass="ui-confirmdialog-no" />
-					</p:confirmDialog>
+					</p:column>
+					<p:column width="200">
+						<f:facet name="header">Ações</f:facet>
+						<p:commandLink styleClass="cmdGrid" value="Editar" action="#{teamMemberMB.edit(user.id)}" update=":reg" />
 
-				</p:column>
-			</p:dataTable>
+						
+						<p:commandLink value="Remover" action="#{teamMemberMB.delete(user.id)}" update="listUsers">
+							<p:confirm header="Remover " message="Deseja realmente remover?" icon="ui-icon-alert" />
+						</p:commandLink>
+
+						<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+							<p:commandButton value="Sim" type="button" styleClass="ui-confirmdialog-yes" />
+							<p:commandButton value="Não" type="button" styleClass="ui-confirmdialog-no" />
+						</p:confirmDialog>
+
+					</p:column>
+				</p:dataTable>
+
+			</h:form>
+			
 		</fieldset>
+		
+		<fieldset>
+			<legend>Colaborador</legend>
+		
+			<h:form id="reg">
+				
+				<p:panelGrid columns="3">
+	
+					<p:panelGrid columns="2">
+	
+						<h:outputLabel  value="Nome:" />
+						<h:inputText value="#{teamMemberMB.user.name}" class="form-control" />
+	
+	
+	
+						<h:outputLabel  value="Email:" />
+						<h:inputText value="#{teamMemberMB.user.email}" class="form-control" />
+	
+	
+						
+					</p:panelGrid>
+	
+					<p:panelGrid>
+	
+						<p:outputLabel value="Avaliado por:" for="evaluators" />
+						<p:autoComplete id="evaluators" multiple="true" var="user" converter="userConverter"
+										itemLabel="#{user.name}" itemValue="#{user}"
+										value="#{teamMemberMB.user.evaluatorList}"
+										completeMethod="#{autoCompleteMB.completeMethodUser(query)}"
+										forceSelection="true">
+	
+						</p:autoComplete>
 
-		</h:form>
+					</p:panelGrid>
+	
+					<p:panelGrid>
+						<p:outputLabel value="Avalia quem:" for="evaluateds" />
+						<p:autoComplete id="evaluateds" multiple="true" var="user" converter="userConverter"
+										itemLabel="#{user.name}" itemValue="#{user}"
+										value="#{teamMemberMB.user.evaluatedList}"
+										completeMethod="#{autoCompleteMB.completeMethodUser(query)}"
+										forceSelection="true">
+	
+						</p:autoComplete>
+
+	
+					</p:panelGrid>
+
+					<p:commandButton actionListener="#{teamMemberMB.save}" value="Salvar" class="btn btn-primary" update=":frmUsers @form"  />
+					
+					
+				</p:panelGrid>
+	
+			</h:form>
+
+		</fieldset>
 	</ui:define>
 </ui:composition>
