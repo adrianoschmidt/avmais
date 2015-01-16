@@ -64,9 +64,9 @@ public class TeamMemberMB {
 
     public void delete(Long id){
 
-        userService.delete(id);
+        String retorno = userService.delete(id);
 
-        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Usuário removido com sucesso."));
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(retorno));
         
         init();
         

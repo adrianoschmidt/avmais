@@ -25,20 +25,20 @@ public class User implements Serializable {
 
 	@JoinTable(name = "evaluationrelationship", 
 			joinColumns = {
-				@JoinColumn(name = "avaliador_id", referencedColumnName = "id", nullable = false)}, 
+				@JoinColumn(name = "avaliado_id", referencedColumnName = "id", nullable = false)},
 			inverseJoinColumns = {
-				@JoinColumn(name = "avaliado_id", referencedColumnName = "id", nullable = false)})
+				@JoinColumn(name = "avaliador_id", referencedColumnName = "id", nullable = false)})
 	@ManyToMany(cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-	private List<User> evaluator;
+	private List<User> evaluatorList;
 
 
 	@JoinTable(name = "evaluationrelationship",
 			joinColumns = {
-					@JoinColumn(name = "avaliado_id", referencedColumnName = "id", nullable = false)},
+					@JoinColumn(name = "avaliador_id", referencedColumnName = "id", nullable = false)},
 			inverseJoinColumns = {
-					@JoinColumn(name = "avaliador_id", referencedColumnName = "id", nullable = false)})
+					@JoinColumn(name = "avaliado_id", referencedColumnName = "id", nullable = false)})
 	@ManyToMany(cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-	private List<User> evaluated;
+	private List<User> evaluatedList;
 	
 	private String email;
 	private String name;
@@ -118,19 +118,19 @@ public class User implements Serializable {
 		this.password = password;
 	}
 
-	public List<User> getEvaluator() {
-		return evaluator;
+	public List<User> getEvaluatorList() {
+		return evaluatorList;
 	}
 
-	public void setEvaluator(List<User> evaluator) {
-		this.evaluator = evaluator;
+	public void setEvaluatorList(List<User> evaluatorList) {
+		this.evaluatorList = evaluatorList;
 	}
 
-	public List<User> getEvaluated() {
-		return evaluated;
+	public List<User> getEvaluatedList() {
+		return evaluatedList;
 	}
 
-	public void setEvaluated(List<User> evaluated) {
-		this.evaluated = evaluated;
+	public void setEvaluatedList(List<User> evaluatedList) {
+		this.evaluatedList = evaluatedList;
 	}
 }
