@@ -7,6 +7,8 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import br.com.pdionline.enumeration.ProfileEnum;
+
 @Entity
 @Table(name="AVM_USER")
 public class User implements Serializable {
@@ -43,6 +45,7 @@ public class User implements Serializable {
 	private String email;
 	private String name;
 	private String password;
+	private ProfileEnum profile;
 	
 	
 	/* METHODS */
@@ -132,5 +135,13 @@ public class User implements Serializable {
 
 	public void setEvaluatedList(List<User> evaluatedList) {
 		this.evaluatedList = evaluatedList;
+	}
+	
+	public ProfileEnum getProfile() {
+		return profile;
+	}
+	
+	public void setProfile(ProfileEnum profile) {
+		this.profile = profile;
 	}
 }

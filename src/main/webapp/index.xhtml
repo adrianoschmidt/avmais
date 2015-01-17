@@ -3,19 +3,22 @@
 
 	<ui:define name="content">
 
-		<div style="background-color: #EEE; padding: 25px; margin-left: -30px; margin-right: -30px;">
-			<h1>AV Mais - Seu sistema para avaliações de desempenho</h1>
+		<div style="background-color: #EEE; padding: 25px; margin-left: -30px; margin-right: -30px; text-align: center;">
 
-				<p>Aqui no AV Mais você poderá realizar seu PDI (Plano de Desenvolvimento Individual).</p>
-				<p>
-					<b>O PDI serve para ajudar você a se conhecer melhor e poder crescer profissionalmente.</b>
-				</p>
-				<p>Através de um questionário respondido por você e por outras pessoas como o gestor, colegas de trabalho e RH será dado um feedback e então serão estabelecidos planos (ações e prazos) para o próximo ano.</p>
-				<p style="padding-top: 10px">
-					<h:form>
-						<p:commandButton action="#{naviagationMBean.goToMyPdi}" value="Preencha o seu PDI" class="btn btn-primary btn-lg" />
-					</h:form>
-				</p>
+			<h1>
+				As <b>pessoas</b> são o ativo intangível mais importante nas organizações
+			</h1>
+			<p style="padding-top: 10px">
+				<h:form>
+					<p:commandButton onclick="PF('dlgCadastrase').show()" value="Experimente o AV Mais gratuitamente por 30 dias" class="btn btn-primary btn-lg" />
+				</h:form>
+			</p>
+			<br/>
+			<p>O AV Mais possibilitará a implantação na sua empresa de um processo de avaliação de desempenho e PDI (Plano de Desenvolvimento individual) de forma simples e eficaz.</p>
+			<p>Cadastre-se agora e inicie um processo de avaliação e de PDI em menos de 3 minutos. Experimente gratuitamente por 30 dias.</p>
+			<p>
+				Avaliar seus colaboradores e proporcioná-los desenvolvimento será uma <b>vantagem competitiva</b> para a empresa.
+			</p>
 		</div>
 
 		<div class="row" style="padding-top: 25px;">
@@ -47,7 +50,69 @@
 
 		</div>
 
-		<br/>
-		
+		<div class="bg-info" style="padding: 25px; padding-bottom:25px; margin-top:25px; margin-left: -30px; margin-right: -30px; text-align: center;">
+				<p:commandLink action="#{naviagationMBean.goToMyPdi()}" value="Conheça nossos planos e preços" />
+		</div>
+
+		<div style="background-color: #FFF; padding: 25px; padding-bottom:25px; margin-top:0px; margin-left: -30px; margin-right: -30px; text-align: center;">
+				<p:commandLink action="#{naviagationMBean.goToMyPdi()}" value="Quer integrar seu sistema ao AV Mais? Veja nossa API!" />
+		</div>
+
+		<div class="bg-info" style="padding: 25px; padding-bottom:25px; margin-top:0px; margin-left: -30px; margin-right: -30px; text-align: center;">
+				<p:commandLink action="#{naviagationMBean.goToMyPdi()}" value="Que tal uma palestra sobre &#39;Avaliações de Desempenho&#39; ou sobre &#39;Como dar e receber feedback&#39; na sua empresa?" />
+		</div>
+
+		<div style="background-color: #FFF; padding: 25px; padding-bottom:15px; margin-top:0px; margin-left: -30px; margin-right: -30px; text-align: center;">
+				<p:commandLink action="#{naviagationMBean.goToMyPdi()}" value="Quer fazer seu TCC/Monografia sobre avaliações de desempenho? Nós apoiamos você!" />
+		</div>
+
+		<p:dialog widgetVar="dlgCadastrase" modal="true" header="Cadastro" resizable="false" width="40%" minWidth="300" position="center">
+			<h:form>
+
+				<p:outputLabel value="Experimente gratuitamente por 30 dias" style="padding-top: 15px;" />
+
+				<hr style="margin-top: 0px" />
+
+				<div class="row row-label">
+					<div class="col-md-12">
+						<p:outputLabel value="Seu e-mail" for="itEmail" style="font-weight: normal;" />
+						<p:inputText id="itEmail" value="#{registerMBean.user.email}" class="form-control" required="true" requiredMessage="Campo obrigatório: E-mail" />
+					</div>
+				</div>
+
+				<div class="row row-label">
+					<div class="col-md-12">
+						<p:outputLabel value="Seu nome" for="itName" style="font-weight: normal;" />
+						<p:inputText id="itName" value="#{registerMBean.user.name}" class="form-control" required="true" requiredMessage="Campo obrigatório: Nome" />
+					</div>
+				</div>
+
+				<div class="row row-label">
+					<div class="col-md-12">
+						<p:outputLabel value="Nome da empresa" for="itOrganization" style="font-weight: normal;" />
+						<p:inputText id="itOrganization" value="#{registerMBean.user.organization.name}" class="form-control" required="true" requiredMessage="Campo obrigatório: Nome da empresa" />
+					</div>
+				</div>
+
+				<div class="row row-label">
+					<div class="col-md-12">
+						<p:outputLabel value="Seu telefone" for="itPhoneNumber" style="font-weight: normal;" />
+						<p:inputText id="itPhoneNumber" value="#{registerMBean.user.organization.phoneNumber}" class="form-control" required="true" requiredMessage="Campo obrigatório: Telefone" />
+					</div>
+				</div>
+
+				<div class="row row-label">
+					<div class="col-md-12">
+						<p:outputLabel value="Sua senha" for="itPassword" style="font-weight: normal;" />
+						<p:password id="itPassword" value="#{registerMBean.user.password}" class="form-control" required="true" requiredMessage="Campo obrigatório: Senha" />
+					</div>
+				</div>
+
+				<p:commandButton action="#{registerMBean.save}" value="Experimentar o AV Mais" class="btn btn-primary" process="@form" update="@form" style="margin-top: 20px; margin-bottom: 15px" />
+
+			</h:form>
+
+		</p:dialog>
+
 	</ui:define>
 </ui:composition>

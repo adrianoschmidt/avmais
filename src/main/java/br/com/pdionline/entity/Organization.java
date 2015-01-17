@@ -15,12 +15,15 @@ public class Organization implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	//@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 
 	@Basic(fetch = FetchType.LAZY)
 	private String name;
 
+	@Basic(fetch = FetchType.LAZY)
+	private String phoneNumber;
+	
 	public Long getId() {
 		return id;
 	}
@@ -37,4 +40,11 @@ public class Organization implements Serializable {
 		this.name = name;
 	}
 
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
 }

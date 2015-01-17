@@ -1,5 +1,7 @@
 package br.com.pdionline.ejb;
 
+import java.util.List;
+
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -14,17 +16,18 @@ public class OrganizationService {
 
 	public Organization getLoggedOrganization() {
 		// TODO: implementar para pegar organization do usuario logado
-		// retorna sempre a organization Supero Tecnologia que tem o id 1
 
-		Organization organization = em.find(Organization.class, 1L);
+		List<Organization> organizations = em.createQuery("select o from Organization o").getResultList();
 		
-		if (organization == null) {
-			organization = new Organization();
-			organization.setId(1L);
+		if(organizations.isEmpty()) {
+			Organization organization = new Organization();
 			organization.setName("Supero Tecnologia");
 			this.em.persist(organization);
+			this.em.flush();
+			return organization;
+		} else {
+			return organizations.get(0);
 		}
 		
-		return organization;
 	}
 }
