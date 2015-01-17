@@ -16,7 +16,7 @@ public class MyPdiService {
     private EntityManager em;
     
     @Inject
-    private OrganizationService organizationService;
+    private SecurityService organizationService;
     
 	public String save(MyPdi pdi) {
 		String email = pdi.getUser().getEmail();

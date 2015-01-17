@@ -14,4 +14,8 @@ public class NaviagationMBean {
 		return "meu-pdi.jsf";
 	}
 
+	public String goToHomeGestao() {
+		return "home-gestao.jsf";
+	}
+
 }

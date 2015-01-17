@@ -37,3 +37,11 @@ body {
 	margin-right: 20px;
 	
 }
+
+.price-box{
+}
+
+.thumbnail-price-box{
+	padding-bottom: 15px !important;
+	background-color:#d9edf7 !important;
+}

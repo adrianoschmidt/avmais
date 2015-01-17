@@ -4,67 +4,128 @@
 	<ui:define name="content">
 
 		<div style="background-color: #EEE; padding: 25px; margin-left: -30px; margin-right: -30px; text-align: center;">
-
 			<h1>
 				As <b>pessoas</b> são o ativo intangível mais importante nas organizações
 			</h1>
-			<p style="padding-top: 10px">
-				<h:form>
-					<p:commandButton onclick="PF('dlgCadastrase').show()" value="Experimente o AV Mais gratuitamente por 30 dias" class="btn btn-primary btn-lg" />
-				</h:form>
-			</p>
-			<br/>
+
+			<div style="padding-top: 10px">
+				<p:commandButton onclick="PF('dlgCadastrase').show()" value="Experimente o AV Mais gratuitamente por 30 dias" class="btn btn-primary btn-lg" />
+			</div>
+
+			<br />
 			<p>O AV Mais possibilitará a implantação na sua empresa de um processo de avaliação de desempenho e PDI (Plano de Desenvolvimento individual) de forma simples e eficaz.</p>
 			<p>Cadastre-se agora e inicie um processo de avaliação e de PDI em menos de 3 minutos. Experimente gratuitamente por 30 dias.</p>
-			<p>
-				Avaliar seus colaboradores e proporcioná-los desenvolvimento será uma <b>vantagem competitiva</b> para a empresa.
-			</p>
 		</div>
 
 		<div class="row" style="padding-top: 25px;">
 
 			<div class="col-md-4">
 				<div class="bs-callout">
-					<h4>Melhoria contínua</h4>
-					<p>
-						A cada semana são lançadas novas funcionalidades no AV Mais, estamos sempre buscando oferecer o que há de melhor para você. E aceitamos sugestões! Envie-nos um e-mail: <a href="mailto:contato@avmais.com.br?Subject=Sugestoes" target="_BLANK">contato@avmais.com.br</a>
-					</p>
+					<h4>Retenção de talentos</h4>
+					<p>As pessoas ficarão mais motivadas ao serem avaliadas, receberem feedbacks e definerem metas que as ajudarão a evoluir profissionalmente.</p>
 				</div>
 			</div>
 
 			<div class="col-md-4">
 				<div class="bs-callout">
-					<h4>Segurança é fundamental</h4>
-					<p>Com o AV Mais você pode confiar que seus dados estarão muito bem protegidos através de tecnologias consolidadas e estratégias de segurança. Nossa equipe faz testes de segurança com frequência a fim de garantir a inviolabilidade dos seus dados.</p>
+					<h4>Imparcialidade</h4>
+					<p>Com a avaliação 360º cada colaborador será avaliado por várias pessoas (gestores, subordinados, pares, clientes) a fim de dar imparcialidade e mais informações para a avaliação.</p>
 				</div>
 			</div>
 
 			<div class="col-md-4">
 				<div class="bs-callout">
-					<h4>Trabalhe conosco</h4>
-					<p>
-						Temos vagas na área comercial, analistas de negócio com experiência em avaliações de desempenho e para desenvolvimento de software e segurança da informação. Envie seu currículo para <a href="mailto:talentos@avmais.com.br?Subject=Oportunidades" target="_BLANK">talentos@avmais.com.br</a>
-					</p>
+					<h4>Vantagem Competitiva</h4>
+					<p>Avaliar seus colaboradores e proporcioná-los desenvolvimento será uma vantagem competitiva para sua empresa.</p>
 				</div>
 			</div>
 
 		</div>
 
-		<div class="bg-info" style="padding: 25px; padding-bottom:25px; margin-top:25px; margin-left: -30px; margin-right: -30px; text-align: center;">
-				<p:commandLink action="#{naviagationMBean.goToMyPdi()}" value="Conheça nossos planos e preços" />
+		<div class="bg-info" style="padding-top: 20px; padding-bottom: 25px; padding-left: 200px;; padding-right: 200px; margin-top: 25px; margin-left: -30px; margin-right: -30px; text-align: center;">
+			<h3 style="padding-bottom: 30px">Dúvidas ou sugestões?</h3>
+
+			<p>
+				Entre em contato pelo e-mail: <a href="mailto:contato@avmais.com.br?Subject=Contato" target="_BLANK">contato@avmais.com.br</a>
+			</p>
 		</div>
 
-		<div style="background-color: #FFF; padding: 25px; padding-bottom:25px; margin-top:0px; margin-left: -30px; margin-right: -30px; text-align: center;">
-				<p:commandLink action="#{naviagationMBean.goToMyPdi()}" value="Quer integrar seu sistema ao AV Mais? Veja nossa API!" />
+		<div style="padding: 25px; padding-bottom: 25px; margin-top: 0px; margin-left: -30px; margin-right: -30px; text-align: center;">
+			<h2 style="padding-bottom: 30px">Planos e preços</h2>
+
+			<div class="row" style="padding-left: 100px; padding-right: 100px;">
+				<div class="col-sm-12 col-md-3 price-box">
+					<div class="thumbnail thumbnail-price-box">
+						<h3>Bronze</h3>
+						<p>Até 10 usuários</p>
+						<p>R$14,90 por mês</p>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-3 price-box">
+					<div class="thumbnail thumbnail-price-box">
+						<h3>Prata</h3>
+						<p>Até 30 usuários</p>
+						<p>R$24,90 por mês</p>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-3 price-box">
+					<div class="thumbnail thumbnail-price-box">
+						<h3>Ouro</h3>
+						<p>Até 50 usuários</p>
+						<p>R$49,90 por mês</p>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-3 price-box">
+					<div class="thumbnail thumbnail-price-box">
+						<h3>Diamante</h3>
+						<p>Usuário ilimitados</p>
+						<p>R$99,90 por mês</p>
+					</div>
+				</div>
+			</div>
+
+			<p>Sem taxa de implantação ou qualquer outro tipo de taxa.</p>
+			<p>Todos os planos tem desconto de 20% no plano anual.</p>
+
+			<div style="padding-top: 10px">
+				<p:commandButton onclick="PF('dlgCadastrase').show()" value="Experimente o AV Mais gratuitamente por 30 dias" class="btn btn-primary btn-lg" />
+			</div>
 		</div>
 
-		<div class="bg-info" style="padding: 25px; padding-bottom:25px; margin-top:0px; margin-left: -30px; margin-right: -30px; text-align: center;">
-				<p:commandLink action="#{naviagationMBean.goToMyPdi()}" value="Que tal uma palestra sobre &#39;Avaliações de Desempenho&#39; ou sobre &#39;Como dar e receber feedback&#39; na sua empresa?" />
+<!-- 
+		<div class="bg-info" style="padding-top: 25px; padding-bottom: 25px; padding-left: 200px;; padding-right: 200px; margin-top: 25px; margin-left: -30px; margin-right: -30px; text-align: center;">
+			<h2 style="padding-bottom: 30px">Segurança é fundamental</h2>
+
+			<p>Com o AV Mais você pode confiar que seus dados estarão muito bem protegidos através de tecnologias consolidadas e estratégias de segurança.</p>
+
+			<p>Nossa equipe faz testes de segurança com frequência a fim de garantir a inviolabilidade dos seus dados.</p>
+
 		</div>
 
-		<div style="background-color: #FFF; padding: 25px; padding-bottom:15px; margin-top:0px; margin-left: -30px; margin-right: -30px; text-align: center;">
-				<p:commandLink action="#{naviagationMBean.goToMyPdi()}" value="Quer fazer seu TCC/Monografia sobre avaliações de desempenho? Nós apoiamos você!" />
+		<div class="bg-info" style="padding-top: 25px; padding-bottom: 25px; padding-left: 200px;; padding-right: 200px; margin-top: 25px; margin-left: -30px; margin-right: -30px; text-align: center;">
+			<h2 style="padding-bottom: 30px">Melhoria contínua</h2>
+
+			<p>A cada semana são lançadas novas funcionalidades no AV Mais, estamos sempre buscando oferecer o que há de melhor para você.</p>
+			<p>
+				E aceitamos sugestões! Envie-nos um e-mail: <a href="mailto:contato@avmais.com.br?Subject=Sugestoes" target="_BLANK">contato@avmais.com.br</a>
+			</p>
 		</div>
+
+ -->
+
+		<!-- 
+		<div class="bg-info" style="padding: 25px; padding-bottom: 25px; margin-top: 0px; margin-left: -30px; margin-right: -30px; text-align: center;">
+			<p:commandLink action="#{naviagationMBean.goToMyPdi()}" value="Quer integrar seu sistema ao AV Mais? Veja nossa API!" />
+		</div>
+
+		<div style="padding: 25px; padding-bottom: 25px; margin-top: 0px; margin-left: -30px; margin-right: -30px; text-align: center;">
+			<p:commandLink action="#{naviagationMBean.goToMyPdi()}" value="Que tal uma palestra sobre &#39;Avaliações de Desempenho&#39; ou sobre &#39;Como dar e receber feedback&#39; na sua empresa?" />
+		</div>
+
+		<div class="bg-info" style="padding: 25px; padding-bottom: 15px; margin-top: 0px; margin-left: -30px; margin-right: -30px; text-align: center;">
+			<p:commandLink action="#{naviagationMBean.goToMyPdi()}" value="Quer fazer seu TCC/Monografia sobre avaliações de desempenho? Nós apoiamos você!" />
+		</div>
+		 -->
 
 		<p:dialog widgetVar="dlgCadastrase" modal="true" header="Cadastro" resizable="false" width="40%" minWidth="300" position="center">
 			<h:form>
@@ -113,6 +174,5 @@
 			</h:form>
 
 		</p:dialog>
-
 	</ui:define>
 </ui:composition>

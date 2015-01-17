@@ -15,6 +15,7 @@ public class RegisterMBean {
 
 	public User user;
 	
+	
 	@EJB
 	public UserService userService;
 
@@ -24,8 +25,10 @@ public class RegisterMBean {
 		this.user.setOrganization(new Organization());
 	}
 	
-	public void save() {
+	public String save() {
 		this.userService.create(user);
+		
+		return new NaviagationMBean().goToHomeGestao();
 	}
 	
 
