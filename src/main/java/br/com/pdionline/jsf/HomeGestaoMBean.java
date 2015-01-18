@@ -19,8 +19,13 @@ public class HomeGestaoMBean {
 	private void init() {
 	}
 	
+	private String loggedOrganizationName;
+	
 	public String getLoggedOrganizationName() {
-		return this.securityService.getLoggedOrganizationName();
+		if (loggedOrganizationName == null) {
+			loggedOrganizationName = this.securityService.getLoggedOrganizationName();
+		}
+		return loggedOrganizationName;
 	}
 	
 

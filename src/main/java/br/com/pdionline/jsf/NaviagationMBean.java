@@ -13,6 +13,10 @@ public class NaviagationMBean {
 	public String goToMyPdi() {
 		return "meu-pdi.jsf";
 	}
+	
+	public String goToGerarPdi() {
+		return "gerar-pdi.jsf";
+	}
 
 	public String goToHomeGestao() {
 		return "home-gestao.jsf";

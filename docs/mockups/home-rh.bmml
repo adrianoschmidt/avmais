@@ -36,9 +36,9 @@
         <text>Envie%20o%20link%20abaixo%20para%20seus%20colaboradores%20fazerem%20sua%20autoavalia%E7%E3o.</text>
       </controlProperties>
     </control>
-    <control controlID="11" controlTypeID="com.balsamiq.mockups::Link" x="135" y="358" w="-1" h="-1" measuredW="343" measuredH="19" zOrder="8" locked="false" isInGroup="-1">
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Link" x="135" y="358" w="-1" h="-1" measuredW="339" measuredH="19" zOrder="8" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>http%3A//www.avmais.com.br/auto-avaliacao.jsf%3Forg%3DA4g67s</text>
+        <text>http%3A//www.avmais.com.br/autoavaliacao.jsf%3Forg%3DA4g67s</text>
       </controlProperties>
     </control>
     <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="135" y="273" w="-1" h="-1" measuredW="79" measuredH="21" zOrder="9" locked="false" isInGroup="-1">
@@ -153,9 +153,9 @@
         <text>TExto%20dos%20valores%3A%0A%20%0AOs%20valores%20s%E3o%20os%20princ%EDpios%20que%20guiam%20a%20vida%20da%20organiza%E7%E3o.%0A%20%0AExemplos%20de%20valores%3A%0A%20%0AFiat%0ASatisfa%E7%E3o%20do%20cliente%0AValoriza%E7%E3o%20e%20respeito%20%E0s%20pessoas%0AAtuar%20como%20parte%20integrante%20do%20Grupo%20Fiat%0AResponsabilidade%20social%0ARespeito%20ao%20Meio%20Ambiente%0A%20%0AHSBC%0ANossa%20conduta%20deve%20refletir%20os%20mais%20altos%20padr%F5es%20de%20%E9tica%3B%0ANossa%20comunica%E7%E3o%20deve%20ser%20clara%20e%20precisa%3B%0ANosso%20gerenciamento%20deve%20ser%20em%20equipe%2C%20consistente%20e%20focado%3B%0ANosso%20relacionamento%20com%20clientes%20e%20colaboradores%20deve%20ser%20transparente%20e%20baseado%20na%20responsabilidade%20e%20confian%E7a%20entre%20as%20partes.%0A%20%0AGerdau%0ATer%20a%20prefer%EAncia%20do%20CLIENTE%0ASEGURAN%C7A%20das%20pessoas%20acima%20de%20tudo%0APESSOAS%20respeitadas%2C%20comprometidas%20e%20realizadas%0AEXCEL%CANCIA%20com%20SIMPLICIDADE%0AFoco%20em%20RESULTADOS%0AINTEGRIDADE%20com%20todos%20os%20p%FAblicos%0ASUSTENTABILIDADE%20econ%F4mica%2C%20social%20e%20ambiental</text>
       </controlProperties>
     </control>
-    <control controlID="49" controlTypeID="com.balsamiq.mockups::ButtonBar" x="125" y="120" w="1197" h="21" measuredW="517" measuredH="21" zOrder="33" locked="false" isInGroup="-1">
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::ButtonBar" x="125" y="120" w="1197" h="21" measuredW="512" measuredH="21" zOrder="33" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Home%20AV%20Mais%2C%20Home%20do%20Colaborador%2C%20Equipe%2C%20PDI%2C%20Visualizar%20Avalia%E7%F5es</text>
+        <text>Home%20Gest%E3o%2C%20Home%20do%20Colaborador%2C%20Equipe%2C%20PDI%2C%20Visualizar%20Avalia%E7%F5es</text>
       </controlProperties>
     </control>
     <control controlID="50" controlTypeID="com.balsamiq.mockups::Label" x="1281" y="82" w="-1" h="-1" measuredW="41" measuredH="21" zOrder="34" locked="false" isInGroup="-1">
@@ -191,7 +191,7 @@
     </control>
     <control controlID="59" controlTypeID="com.balsamiq.mockups::StickyNote" x="701" y="433" w="173" h="71" measuredW="109" measuredH="123" zOrder="39" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Redireciona%20para%20tela%20meu-pdi.jsf%20com%20o%20colaborador%20setado.</text>
+        <text>Redireciona%20para%20tela%20gerar-pdi.jsf%20com%20o%20colaborador%20setado.</text>
       </controlProperties>
     </control>
     <control controlID="60" controlTypeID="com.balsamiq.mockups::HRule" x="108" y="731" w="1229" h="-1" measuredW="100" measuredH="10" zOrder="40" locked="false" isInGroup="-1"/>

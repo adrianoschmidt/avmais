@@ -5,20 +5,78 @@
 
 		<h:form>
 			<div class="btn-group avm-menubar" role="group" aria-label="...">
-			 	<p:commandButton value="Home Gestão" url="/#{navigationMBean.goToHomeGestao}" class="btn btn-default"/>
-			 	<p:commandButton value="Home Colaborador" url="/#{navigationMBean.goToHomeColaborador}" class="btn btn-default"/>
-			 	<p:commandButton value="Equipe" url="/#{navigationMBean.goToEquipe}" class="btn btn-default"/>
-			 	<p:commandButton value="PDI" url="/#{navigationMBean.goToPDI}" class="btn btn-default"/>
-			 	<p:commandButton value="Visualizar Avaliações" url="/#{navigationMBean.goToVisualizaarAvaliacoes}" class="btn btn-default"/>
-			 </div>
+				<p:commandButton value="Home Gestão" url="/#{navigationMBean.goToHomeGestao}" class="btn btn-default" />
+				<p:commandButton value="Home Colaborador" url="/#{navigationMBean.goToHomeColaborador}" class="btn btn-default" />
+				<p:commandButton value="Equipe" url="/#{navigationMBean.goToEquipe}" class="btn btn-default" />
+				<p:commandButton value="PDI" url="/#{navigationMBean.goToPDI}" class="btn btn-default" />
+				<p:commandButton value="Visualizar Avaliações" url="/#{navigationMBean.goToVisualizaarAvaliacoes}" class="btn btn-default" />
+			</div>
 		</h:form>
 
 		<fieldset>
 			<legend>#{homeGestaoMBean.loggedOrganizationName}</legend>
 
-			asdas
-			aasdas
+			<div class="col-md-4">
+				<p:outputLabel value="Missão" for="itMissao" />
+				<p:inputTextarea id="itMissao" value="#{registerMBean.user.organization.phoneNumber}" class="form-control" />
+				<p:watermark value="Escreva aqui a missão da #{homeGestaoMBean.loggedOrganizationName}" for="itMissao" />
+			</div>
+			<div class="col-md-4">
+				<p:outputLabel value="Visão" for="itVisao" />
+				<p:inputTextarea id="itVisao" value="#{registerMBean.user.organization.phoneNumber}" class="form-control" />
+				<p:watermark value="Escreva aqui a visão da #{homeGestaoMBean.loggedOrganizationName}" for="itVisao" />
+			</div>
+			<div class="col-md-4">
+				<p:outputLabel value="Valores" for="itValores" />
+				<p:inputTextarea id="itValores" value="#{registerMBean.user.organization.phoneNumber}" class="form-control" />
+				<p:watermark value="Escreva aqui os valores da #{homeGestaoMBean.loggedOrganizationName}" for="itValores" />
+			</div>
+
 		</fieldset>
+
+		<br />
+
+		<fieldset>
+			<legend>Inicie as avaliações</legend>
+
+			<div class="col-md-4">
+				<h4>Autoavaliação</h4>
+				<p>Envie o link abaixo para seus colaboradores fazerem sua autoavaliação.</p>
+				<p>http://www.avmais.com.br/autoavaliacao.jsf?org=A4g67s</p>
+			</div>
+
+			<div class="col-md-4">
+				<h4>Avaliação 360º</h4>
+				<p>Após a autoavaliação ter sido preenchida, e os avaliadores terem sido cadastrados (clique aqui para cadastrar a equipe) você pode solicitar aos avaliadores que acessem o AV Mais pelo link http://www.avmais.com.br para responderem as avaliações.</p>
+			</div>
+
+			<div class="col-md-4">
+				<h4>PDI</h4>
+				<p>Após o colaborador fazer sua autoavaliação, você já pode iniciar o PDI dele, porém, é mais interessante se você também realizou a avaliação 360º para ter mais informações na hora de gerar o PDI.</p>
+				<h:form>
+					<p:commandButton action="#{naviagationMBean.goToGerarPdi}" value="Iniciar PDI" styleClass="btn btn-default" />
+				</h:form>
+			</div>
+		</fieldset>
+
+		<br />
+
+		<div class="row" style="margin: 0px">
+			<div class="col-md-6" style="padding-left: 0px; padding-top: 0px; padding-bottom: 0px;">
+				<fieldset>
+					<legend>Visualizar avaliações</legend>
+					asdasda
+				</fieldset>
+			</div>
+			<div class="col-md-6" style="padding-right: 0px; padding-top: 0px; padding-bottom: 0px;">
+				<fieldset>
+					<legend>Equipe</legend>
+					asdasd
+				</fieldset>
+			</div>
+		</div>
 		
+		<br/>
+
 	</ui:define>
 </ui:composition>
