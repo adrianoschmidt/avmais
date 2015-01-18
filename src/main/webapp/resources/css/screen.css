@@ -45,3 +45,11 @@ body {
 	padding-bottom: 15px !important;
 	background-color:#d9edf7 !important;
 }
+
+.avm-menubar {
+	margin-top: 25px !important;
+	margin-bottom: 10px !important;
+	width: 100% !important;
+	background-color: #d9edf7 !important;
+	padding: 3px;	
+}

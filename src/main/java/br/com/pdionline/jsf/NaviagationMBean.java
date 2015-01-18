@@ -1,13 +1,13 @@
 package br.com.pdionline.jsf;
 
-import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 
 /**
  * MBean onde estarao as strings de redirecionamento.
  */
 @ManagedBean
-@RequestScoped
+@ApplicationScoped
 public class NaviagationMBean {
 
 	public String goToMyPdi() {

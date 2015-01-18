@@ -3,6 +3,16 @@
 
 	<ui:define name="content">
 
+		<h:form>
+			<div class="btn-group avm-menubar" role="group" aria-label="...">
+			 	<p:commandButton value="Home Gestão" url="/#{navigationMBean.goToHomeGestao}" class="btn btn-default"/>
+			 	<p:commandButton value="Home Colaborador" url="/#{navigationMBean.goToHomeColaborador}" class="btn btn-default"/>
+			 	<p:commandButton value="Equipe" url="/#{navigationMBean.goToEquipe}" class="btn btn-default"/>
+			 	<p:commandButton value="PDI" url="/#{navigationMBean.goToPDI}" class="btn btn-default"/>
+			 	<p:commandButton value="Visualizar Avaliações" url="/#{navigationMBean.goToVisualizaarAvaliacoes}" class="btn btn-default"/>
+			 </div>
+		</h:form>
+
 		<fieldset>
 			<legend>#{homeGestaoMBean.loggedOrganizationName}</legend>
 
