@@ -12,3 +12,13 @@ Qualquer dúvida entre em contato: adriano@localhost8080.com.br
 
 Um grande abraço!
 Adriano Schmidt
+
+---------------------------------------------------------------------------------------------------------
+
+Para montar o ambiente faça fork e configure o projeto no wildfly. Será necessário um banco de dados PostgreSQL. Você pode usar banco de dados em memória também.
+
+As atividades para serem feitas estão organizadas no Trello: https://trello.com/b/7SWi2p9u/av-mais
+
+Qualquer dúvida entre em contato: adriano@localhost8080.com.br
+
+---------------------------------------------------------------------------------------------------------
