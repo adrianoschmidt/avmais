@@ -5,7 +5,7 @@ Rode o comando abaixo para ter acesso ao banco de dados no openshift:
 
 Adicione o datasource no seu standalone.xml
 
-<datasource jndi-name="java:jboss/datasources/PostgreDS" pool-name="PostgreDS" enabled="true" use-java-context="true">
+<datasource jndi-name="java:jboss/datasources/PostgreSQLDS" pool-name="PostgreSQLDS" enabled="true" use-java-context="true">
     <connection-url>jdbc:postgresql://127.0.0.1:5432/avmais</connection-url>
     <driver>postgresql-9.3-1102.jdbc4.jar</driver>
     <security>

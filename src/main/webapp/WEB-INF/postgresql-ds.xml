@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <datasources xmlns="http://www.jboss.org/ironjacamar/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.jboss.org/ironjacamar/schema http://docs.jboss.org/ironjacamar/schema/datasources_1_0.xsd">
 
-	<!-- 
-	<datasource jndi-name="java:jboss/datasources/PostgreSqlDS" pool-name="PostgreSqlDS" enabled="true" use-java-context="true">
-		<connection-url>jdbc:postgresql://127.0.0.1:5432/avmais</connection-url>
-		<driver>postgresql-9.3-1102.jdbc4.jar</driver>
-		<security>
-			<user-name>adminsp2zhyc</user-name>
-			<password>F9zt-QHyqv3i</password>
-		</security>
+	<datasource jndi-name="java:jboss/datasources/PostgreSQLDS" pool-name="PostgreSQLDS" enabled="true" use-java-context="true">
+	    <connection-url>jdbc:postgresql://127.0.0.1:5432/avmais</connection-url>
+	    <driver>postgresql-9.3-1102.jdbc4.jar</driver>
+	    <security>
+	        <user-name>adminsp2zhyc</user-name>
+	        <password>F9zt-QHyqv3i</password>
+	    </security>
 	</datasource>
-	 -->
+
 </datasources>
  
